@@ -1,0 +1,81 @@
+\appendix
+\section{Formal Conditions for the Failure of Probabilistic Factorization}
+  \label{app:factorization}
+
+  This appendix provides a formal clarification of the structural conditions under
+  which probabilistic factorization fails in the presence of non-injective projections.
+  The purpose is not to introduce new physical assumptions, but to make explicit the
+  logical content underlying the arguments presented in the main text.
+
+  Let $(\Omega,\Sigma,\mu)$ be a probability space describing underlying configurations
+  $\omega \in \Omega$, equipped with a normalized measure $\mu$.
+  Observable outcomes are obtained through a measurable mapping
+  \begin{equation}
+    \Pi : \Omega \rightarrow \mathcal{O},
+  \end{equation}
+  where $\mathcal{O}$ denotes the space of observable descriptions.
+  We assume that $\Pi$ is non-injective, so that there exist distinct
+  $\omega_1 \neq \omega_2$ such that $\Pi(\omega_1)=\Pi(\omega_2)$.
+
+  Let $A$ and $B$ denote two spacelike separated measurement settings, and let
+  $a \in \mathcal{O}_A$ and $b \in \mathcal{O}_B$ denote the corresponding observable
+  outcomes.
+  The joint probability distribution accessible at the effective level is given by
+  \begin{equation}
+    P(a,b \mid A,B)
+    =
+    \mu\!\left(\Pi^{-1}(a,b)\right)
+    =
+    \sum_{\omega \in \Pi^{-1}(a,b)} \mu(\omega).
+  \end{equation}
+
+  Suppose that a factorizable representation of the joint distribution exists.
+  Then there must exist a measurable variable $\lambda$ and a probability density
+  $\rho(\lambda)$ such that
+  \begin{equation}
+    P(a,b \mid A,B)
+    =
+    \int d\lambda\,
+    \rho(\lambda)\,
+    P(a \mid A,\lambda)\,
+    P(b \mid B,\lambda).
+    \label{eq:bell-factorization}
+  \end{equation}
+  This representation implicitly assumes that $\lambda$ provides a complete and
+  non-redundant parameterization of the relevant underlying configurations for the
+  observable outcomes.
+
+  However, when $\Pi$ is non-injective, no such variable $\lambda$ can generically
+  exist at the effective level.
+  Any candidate $\lambda$ constructed from observable data must identify entire
+  equivalence classes
+  \begin{equation}
+    [\omega] = \{\omega' \in \Omega \mid \Pi(\omega')=\Pi(\omega)\},
+  \end{equation}
+  rather than individual underlying configurations.
+  As a result, conditioning on $\lambda$ does not isolate independent contributions
+  associated with $A$ and $B$.
+
+  More formally, if $\lambda$ is a function of $\Pi(\omega)$, then $\lambda$ is constant
+  over each equivalence class $[\omega]$.
+  The joint probability conditioned on $\lambda$ therefore takes the form
+  \begin{equation}
+    P(a,b \mid A,B,\lambda)
+    =
+    \sum_{\omega \in [\omega_\lambda]} \mu(\omega \mid \lambda),
+  \end{equation}
+  which does not decompose into a product of independent marginal terms unless
+  additional constraints are imposed.
+  In generic non-injective cases, such constraints are absent, and factorization fails.
+
+  This establishes that non-injectivity of the mapping from underlying configurations
+  to observable descriptions is sufficient to obstruct any representation of the form
+  Eq.~\eqref{eq:bell-factorization}.
+  The failure of Bell-type factorization thus follows from a purely structural property
+  of the descriptive mapping, independently of any assumptions about dynamical
+  nonlocality, retrocausality, or hidden variables.
+
+  The result emphasizes that Bell inequalities apply only to effective descriptions
+  admitting an injective or equivalently factorizable representation.
+  When observable outcomes arise through non-injective projections, violations of Bell
+  inequalities are a natural and generic consequence of the descriptive structure itself.

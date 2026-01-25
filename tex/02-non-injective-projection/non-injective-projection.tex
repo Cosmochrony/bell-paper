@@ -1,0 +1,60 @@
+\section{Non-Injective Projection and the Failure of Bell Factorization}
+  \label{sec:non-injective-projection}
+
+\section{Non-Injective Projection and the Failure of Factorization}
+  \label{sec:noninjective-projection}
+
+  We consider a minimal abstract setting in which observable descriptions arise from
+  an underlying configuration space through a generally many-to-one mapping.
+  Let $\Omega$ denote the space of underlying configurations, assumed to be fully
+  specified and governed by local dynamics.
+  Observable outcomes are defined through a projection
+  \begin{equation}
+    \Pi : \Omega \rightarrow \mathcal{O},
+  \end{equation}
+  where $\mathcal{O}$ is the space of observable states or measurement outcomes.
+  Crucially, $\Pi$ is assumed to be non-injective, so that multiple distinct elements
+  of $\Omega$ correspond to the same observable description.
+
+  Let $A$ and $B$ denote two spacelike separated measurement settings, with corresponding
+  observable outcomes $a \in \mathcal{O}_A$ and $b \in \mathcal{O}_B$.
+  In standard local hidden-variable models, one assumes the existence of a variable
+  $\lambda$ such that the joint probability distribution factorizes as
+  \begin{equation}
+    P(a,b \mid A,B,\lambda) = P(a \mid A,\lambda)\,P(b \mid B,\lambda).
+  \end{equation}
+  Bell inequalities follow from this factorization together with statistical independence
+  assumptions on $\lambda$.
+
+  In the present framework, no such factorization is generically available.
+  Because the observable outcomes are obtained through the projection $\Pi$, the
+  probability distribution accessible at the effective level is given by
+  \begin{equation}
+    P(a,b \mid A,B) =
+    \sum_{\omega \in \Pi^{-1}(a,b)}
+    \mu(\omega),
+  \end{equation}
+  where $\mu$ is a probability measure on $\Omega$, and $\Pi^{-1}(a,b)$ denotes the
+  set of underlying configurations compatible with the joint observable outcome $(a,b)$.
+
+  When $\Pi$ is non-injective, the preimage $\Pi^{-1}(a,b)$ does not decompose into
+  independent subsets associated with $A$ and $B$.
+  As a result, the joint probability $P(a,b \mid A,B)$ does not admit a representation
+  as a product of marginal probabilities conditioned on any set of effective variables.
+  The failure of factorization arises from the structure of the projection itself,
+  not from any dynamical interaction between the measurement regions.
+
+  Importantly, locality at the underlying level is preserved.
+  The measure $\mu(\omega)$ may be defined over configurations with strictly local
+  causal structure, and no superluminal influence or signal exchange is required.
+  The violation of Bell inequalities therefore reflects a mismatch between the
+  factorizable structure assumed in Bell-type derivations and the actual structure
+  of effective descriptions induced by non-injective mappings.
+
+  This observation identifies non-injectivity as a sufficient condition for the
+  failure of Bell factorization.
+  Bell inequalities constrain only those effective models in which the mapping
+  from underlying configurations to observables is injective or admits an equivalent
+  factorizable representation.
+  When this condition fails, Bell-type correlations may arise without violating
+  local causality at the underlying level.

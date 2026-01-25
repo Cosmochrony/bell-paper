@@ -1,0 +1,70 @@
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl} % Math and Physical Sciences Numbered Reference Style
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{microtype}
+\usepackage{xparse}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+% Boxes
+\usepackage[most]{tcolorbox}
+% Plots (pgfplots provides axis/addplot)
+\usepackage{pgfplots}
+\usetikzlibrary{intersections}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.18}
+\NewDocumentCommand{\subsubsubsection}{s m}{%
+  \IfBooleanTF{#1}{\paragraph*{#2}}{\paragraph{#2}}%
+}
+\usetikzlibrary
+{arrows.meta, calc, fit, decorations.pathmorphing, decorations.pathreplacing, shapes.geometric, shadings, positioning,
+  decorations.markings, patterns}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\title[Cosmochrony]
+{Bell Inequality Violations from Non-Injective Projection}
+\author*[1]{\fnm{Jérôme} \sur{Beau}}\email{jerome.beau@cosmochrony.org}
+\affil*[1]{\orgname{Independent Researcher}, \country{France}}
+\date{}
+
+\input{abstract}
+
+\keywords{Bell inequalities, quantum correlations, non-injective projection,
+  probabilistic factorization, locality, quantum foundations}
+
+\begin{document}
+  \maketitle
+
+  \clearpage
+  \tableofcontents
+
+  \input{01-introduction/introduction}
+  \input{02-non-injective-projection/non-injective-projection}
+  \input{03-math-model/math-model}
+  \input{04-bell-without-hidden-variables/bell-without-hidden-variables}
+  \input{05-link-with-emergence/link-with-emergence}
+  \input{06-conclusion/conclusion}
+
+  \appendix
+  \clearpage
+
+  \section*{Appendices}
+    \input{A-factorization/factorization}
+
+    \backmatter
+
+    \bmhead{Acknowledgements}
+    The author acknowledges the use of large language models as a supportive tool
+    for refining language, structure, and internal consistency during the
+    development of this manuscript.
+    All conceptual contributions, theoretical choices, and interpretations remain the sole responsibility of the author.
+
+    \bibliography{refs}
+
+\end{document}
