@@ -1,0 +1,95 @@
+\section{A Toy Model Illustrating Non-Injective Projection}
+  \label{app:toy-model}
+
+  We present a simple toy model intended to illustrate how Bell-type correlations may
+  arise from non-injective projection without invoking nonlocal dynamics, hidden
+  variables, or superdeterministic assumptions.
+  The model is deliberately minimal and does not aim to reproduce the full structure
+  of quantum theory.
+  Its purpose is solely to make explicit the logical mechanism underlying the failure
+  of probabilistic factorization.
+
+  \subsection{Underlying configuration space}
+    \label{subsec:underlying-configuration-space}
+
+    Let $\Omega$ denote a finite set of underlying configurations.
+    Each configuration $\omega \in \Omega$ represents a complete specification of a
+    relational structure.
+    No spatiotemporal interpretation is assumed at this level, and no notion of
+    subsystem decomposition is imposed.
+
+    We consider a situation in which two measurement regions, denoted $A$ and $B$, are
+    identified only at the level of observable descriptions.
+    At the level of $\Omega$, the configurations need not decompose into independent
+    components associated with $A$ and $B$.
+
+  \subsection{Non-injective projection}
+    \label{subsec:non-injective-projection}
+
+    Observable outcomes are defined through a projection
+    \[
+      \Pi : \Omega \rightarrow O_A \times O_B ,
+    \]
+    where $O_A$ and $O_B$ denote the sets of possible outcomes for measurements performed
+    in regions $A$ and $B$, respectively.
+
+    The projection $\Pi$ is assumed to be non-injective.
+    Distinct underlying configurations may therefore correspond to the same pair of
+    observable outcomes $(a,b)$.
+    Observable states are thus identified with equivalence classes
+    \[
+      [\omega] = \{ \omega' \in \Omega \mid \Pi(\omega') = \Pi(\omega) \}.
+    \]
+
+  \subsection{Emergence of correlations}
+    \label{subsec:emergence-of-correlations}
+
+    Let $\mu(\omega)$ be a probability distribution defined on $\Omega$.
+    The joint probability distribution accessible at the observable level is given by
+    \[
+      P(a,b) = \sum_{\omega \in \Pi^{-1}(a,b)} \mu(\omega).
+    \]
+
+    Because the preimage $\Pi^{-1}(a,b)$ does not generically decompose into independent
+    subsets associated with $A$ and $B$, the joint probability $P(a,b)$ does not admit a
+    factorized representation of the form $P(a)P(b)$ or
+    $P(a \mid \lambda) P(b \mid \lambda)$ for any effective variable $\lambda$.
+
+    The resulting correlations arise not from any interaction or information exchange
+    between $A$ and $B$, but from the fact that both outcomes are constrained by the same
+    underlying relational configuration.
+    From the perspective of the effective description, the two outcomes appear correlated
+    even when the corresponding measurements are spacelike separated.
+
+  \subsection{Free choice and absence of superdeterminism}
+    \label{subsec:free-choice-and-absence-of-superdeterminism}
+
+    Measurement settings at $A$ and $B$ may be freely and independently chosen within the
+    effective description.
+    The probability distribution $\mu(\omega)$ is assumed to be independent of these
+    choices.
+    No correlation between measurement settings and underlying configurations is required
+    or assumed.
+
+    The violation of statistical independence arises solely from the non-injective nature
+    of the projection $\Pi$.
+    Because observable outcomes do not provide access to the full underlying
+    configuration, conditioning on observable variables does not isolate independent
+    degrees of freedom.
+    The failure of probabilistic factorization is therefore structural rather than
+    conspiratorial.
+
+  \subsection{Interpretation}
+    \label{subsec:interpretation}
+
+    This toy model illustrates how two observables may appear correlated because they
+    represent different projections of a single underlying structure.
+    In this sense, Bell-type correlations may be understood as consistency constraints
+    imposed by a non-factorizable effective description, rather than as signatures of
+    nonlocal causation.
+
+    While highly simplified, the model captures the essential logical mechanism discussed
+    in the main text.
+    More elaborate realizations may be constructed by enriching the structure of
+    $\Omega$ or the projection $\Pi$, but the origin of the correlations remains the same:
+    the non-injective mapping between underlying configurations and observable outcomes.
