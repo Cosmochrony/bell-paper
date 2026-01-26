@@ -1,7 +1,6 @@
-\documentclass[pdflatex,sn-mathphys-num]{sn-jnl} % Math and Physical Sciences Numbered Reference Style
+\documentclass[entropy,article,submit,pdftex,moreauthors]{Definitions/mdpi}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{physics}
 \usepackage{tikz}
 \usepackage{amsopn}
@@ -27,22 +26,39 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
-\title[Cosmochrony]
-{Bell Inequality Violations from Non-Injective Projection}
-\author*[1]{\fnm{Jérôme} \sur{Beau}}\email{jerome.beau@cosmochrony.org}
-\affil*[1]{\orgname{Independent Researcher}, \country{France}}
-\date{}
+\firstpage{1}
+\setcounter{page}{\@firstpage}
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{ }
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ }
+\datepublished{ }
+\doinum{}
+
+\Title{Bell Inequality Violations from Non-Injective Projection}
+
+\newcommand{\orcidauthorA}{0009-0001-7697-7868}
+
+\Author{Jérôme Beau\orcidA{}}
+
+\AuthorNames{Jérôme Beau}
+
+\address{%
+  \quad Independent Researcher; jerome.beau@cosmochrony.org}
+
+\corres{Correspondence: jerome.beau@cosmochrony.org}
 
 \input{abstract}
 
-\keywords{Bell inequalities, quantum correlations, non-injective projection,
-  probabilistic factorization, locality, quantum foundations}
+\keyword{Bell inequalities; quantum correlations; non-injective projection;
+probabilistic factorization; locality; quantum foundations}
 
+\providecommand{\bibcommenthead}{}
 \begin{document}
-  \maketitle
-
-  \clearpage
-  \tableofcontents
 
   \input{01-introduction/introduction}
   \input{02-non-injective-projection/non-injective-projection}
@@ -58,14 +74,14 @@
     \input{A-factorization/factorization}
     \input{B-toy-model/toy-model}
 
-    \backmatter
+    \acknowledgments{The author acknowledges the use of large language models as a
+    supportive tool for refining language, structure, and internal consistency
+    during the development of this manuscript. All conceptual contributions,
+      theoretical choices, and interpretations remain the sole responsibility of the author.}
 
-    \bmhead{Acknowledgements}
-    The author acknowledges the use of large language models as a supportive tool
-    for refining language, structure, and internal consistency during the
-    development of this manuscript.
-    All conceptual contributions, theoretical choices, and interpretations remain the sole responsibility of the author.
+    \conflictsofinterest{The author declares no conflicts of interest.}
 
-    \bibliography{refs}
+    \reftitle{References}
+    \bibliography{references}
 
 \end{document}
