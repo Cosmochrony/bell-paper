@@ -13,8 +13,13 @@
   Crucially, $\Pi$ is assumed to be non-injective, so that multiple distinct elements
   of $\Omega$ correspond to the same observable description.
 
-  Here $\Omega$ denotes the underlying relational configuration space introduced in~\cite{BeauRelationalSpectral},
-  from which effective observables arise through projection.
+  Here $\Omega$ denotes an underlying configuration space from which
+  effective observables arise through projection.
+  Such configuration spaces appear in various approaches where observable
+  descriptions are obtained through coarse-graining of a more detailed
+  state space.
+  Examples of such configuration spaces arise in relational or
+  spectral reconstruction approaches~\cite{Beau2026a}.
   This configuration space should not be interpreted as a hidden physical
   state space or as an ontological completion of quantum mechanics, but rather as a
   structural space of admissible relational configurations underlying the effective
@@ -66,7 +71,10 @@
       \node[anchor=west] at ($(o22)+(0.2,0)$) {$(a_2,b_2)$};
 
 % Projection arrow
-      \draw[arr] ($(Omega.east)+(0.1,0)$) -- node[above] {$\Pi$} ($(Obs.west)+(-0.1,0)$);
+      \draw[arr] ($(Omega.east)+(0.1,0)$)
+      -- node[above] {$\Pi$}
+      node[below, font=\footnotesize] {information loss}
+      ($(Obs.west)+(-0.1,0)$);
 
 % Many-to-one mapping (non-injective)
       \draw[arr] (w1) -- (o11);
