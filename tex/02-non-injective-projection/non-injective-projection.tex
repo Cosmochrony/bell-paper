@@ -45,14 +45,14 @@
       pt/.style={circle, fill, inner sep=1.8pt},
       arr/.style={-Latex, thick},
       marr/.style={-Latex, thick, gray!70},
-      brace/.style={decorate, decoration={brace, mirror, amplitude=5pt}}
+      brace/.style={decorate, decoration={brace, amplitude=5pt}}
     ]
 
   \node[bigbox] (Omega) at (0,0) {};
   \node[above] at (Omega.north) {$\Omega$};
   \node[below, font=\footnotesize] at (Omega.south) {Underlying configurations};
 
-  \node[bigbox] (Obs) at (9.5,0) {};
+  \node[bigbox] (Obs) at (8.0,0) {};
   \node[above] at (Obs.north) {$O_A \times O_B$};
   \node[below, font=\footnotesize] at (Obs.south) {Observable outcomes};
 
@@ -99,12 +99,12 @@
 
   % Braces for equivalence classes
   \draw[brace]
-  ($(w1)+(-1.5,-0.15)$) -- ($(w2)+(-1.5, 0.15)$)
-  node[midway, left=5pt, font=\footnotesize] {$[\omega]_{(a_1,b_1)}$};
+    ($(w1)+(-1.2,-0.15)$) -- ($(w3)+(-1.2, 0.15)$)
+    node[midway, left=5pt, font=\footnotesize] {$[\omega]_{(a_1,b_1)}$};
 
   \draw[brace]
-  ($(w4)+(-1.5,-0.15)$) -- ($(w5)+(-1.5, 0.15)$)
-  node[midway, left=5pt, font=\footnotesize] {$[\omega]_{(a_2,b_1)}$};
+    ($(w4)+(-1.2,-0.15)$) -- ($(w6)+(-1.2, 0.15)$)
+    node[midway, left=5pt, font=\footnotesize] {$[\omega]_{(a_2,b_1)}$};
 
   % Dashed rectangle around observable space
   \draw[densely dashed]
