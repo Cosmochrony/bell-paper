@@ -1,52 +1,69 @@
-\subsection{Quantitative signature of projection entropy}
+\subsection{Quantitative bounds from projection entropy}
   \label{subsec:projection-entropy-bound}
 
   The structural analysis developed above identifies non-injectivity as a sufficient
   condition for the failure of Bell factorizability.
-  We now propose a minimal quantitative characterization of this effect.
+  We now refine this result by proposing a minimal quantitative relation between
+  projection entropy and the strength of Bell--CHSH violations.
 
   Let
   \begin{equation}
     S_{\Pi} \equiv - \sum_{o \in O} \nu(o)\,\log \nu(o),
   \end{equation}
   denote the projection entropy associated with the mapping $\Pi : \Omega \to O$,
-  where $\nu(o) = \mu(\Pi^{-1}(o))$ is the induced measure on observable outcomes.
+  where $\nu(o) = \mu(\Pi^{-1}(o))$.
 
-  The quantity $S_{\Pi}$ measures the effective multiplicity of underlying configurations
-  associated with each observable state.
-  It therefore provides a natural scalar measure of non-injectivity.
+  We introduce a normalized projection entropy
+  \begin{equation}
+    \sigma \;\equiv\; \frac{S_{\Pi}}{S_{\Pi}^{\max}},
+    \qquad 0 \le \sigma \le 1,
+  \end{equation}
+  where $S_{\Pi}^{\max}$ is the maximal entropy compatible with the given observable
+  structure.
 
-  We propose that the strength of Bell--CHSH violations is controlled by $S_{\Pi}$.
-  In particular, the CHSH parameter
+  We propose that the CHSH parameter
   \begin{equation}
     S \equiv |E_{00} + E_{01} + E_{10} - E_{11}|
   \end{equation}
-  is expected to satisfy a structural bound of the form
+  is constrained by a monotonic function of $\sigma$ of the form
   \begin{equation}
-    S \;\leq\; 2 + \Delta(S_{\Pi}),
+    S(\sigma) \;\leq\; 2 + 2\,\Phi(\sigma),
+    \label{eq:general-bound}
   \end{equation}
-  where $\Delta(S_{\Pi})$ is a monotonically increasing function satisfying
+  where $\Phi(\sigma)$ satisfies
   \begin{equation}
-    \Delta(0) = 0.
+    \Phi(0) = 0, \qquad \Phi(1) = 1.
   \end{equation}
 
-  This expresses the fact that Bell violations arise only in regimes where the
-  projection entropy is non-zero.
-  In the limit of an injective mapping ($S_{\Pi} = 0$), standard classical bounds are recovered.
+  This formulation interpolates between three regimes:
 
-  Conversely, increasing projection entropy corresponds to an increasing overlap
-  between equivalence classes of underlying configurations, enhancing the degree
-  of non-factorizability of observable probabilities.
+  \begin{itemize}
+    \item $\sigma = 0$: injective regime, $S = 2$ (classical bound),
+    \item $0 < \sigma < 1$: partial overlap, intermediate non-factorizable regime,
+    \item $\sigma = 1$: maximal overlap, $S = 4$ (algebraic bound).
+  \end{itemize}
 
-  The explicit form of $\Delta(S_{\Pi})$ depends on additional structural constraints
-  on the underlying configuration space and the projection.
-  In particular, physically realizable theories may impose bounds on admissible
-  correlations that restrict $S$ below its algebraic maximum.
+  Additional structural constraints on the underlying configuration space may restrict
+  the admissible form of $\Phi(\sigma)$.
+  In particular, physically realizable theories may impose convexity or information-theoretic
+  constraints that limit the accessible region to
+  \begin{equation}
+    S \;\leq\; 2\sqrt{2},
+  \end{equation}
+  corresponding to the Tsirelson bound.
 
-  This suggests that quantum correlations may correspond to an intermediate regime
-  in which $S_{\Pi}$ is non-zero but constrained, leading to bounded violations
-  consistent with the Tsirelson limit.
+  A minimal realization consistent with this constraint is obtained by requiring that
+  $\Phi(\sigma)$ saturates at an intermediate value $\sigma_q < 1$, such that
+  \begin{equation}
+    S(\sigma_q) = 2\sqrt{2}.
+  \end{equation}
 
-  The relation between projection entropy and Bell-type violations thus provides
-  a potential quantitative bridge between structural non-injectivity and observable
-  correlation strength, and defines a testable signature of the present framework.
+  This suggests that quantum correlations correspond to a constrained finite-capacity
+  regime in which projection entropy is non-zero but does not reach its maximal value.
+  The Tsirelson bound then appears as a structural limitation on admissible
+  non-injective projections rather than as a purely dynamical constraint.
+
+  The relation (\ref{eq:general-bound}) therefore provides a minimal quantitative bridge
+  between projection entropy and observable Bell violations, and defines a testable
+  prediction of the present framework: the strength of correlations is controlled by
+  the degree of non-injectivity of the effective description.
