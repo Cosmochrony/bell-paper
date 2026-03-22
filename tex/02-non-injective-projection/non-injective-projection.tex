@@ -14,15 +14,20 @@
   Crucially, $\Pi$ is assumed to be non-injective, so that multiple distinct elements
   of $\Omega$ correspond to the same observable description.
 
+  Such non-injective mappings arise generically when observable descriptions have
+  a finite descriptive capacity.
+  In this case, the effective space $\mathcal{O}$ cannot encode all distinctions
+  present in $\Omega$, and observable states correspond to equivalence classes
+  of underlying configurations rather than to individual elements.
+
   Here $\Omega$ denotes an underlying configuration space from which
   effective observables arise through projection.
   Such configuration spaces appear in various approaches where observable
   descriptions are obtained through coarse-graining of a more detailed state space.
-  Examples of such configuration spaces arise in relational or
-  spectral reconstruction approaches~\cite{Beau2026a}.
+  Examples arise in relational or spectral reconstruction approaches~\cite{Beau2026a}.
   This configuration space should not be interpreted as a hidden physical
   state space or as an ontological completion of quantum mechanics, but rather as a
-  structural space of admissible relational configurations underlying the effective description.
+  structural space of admissible configurations underlying the effective description.
 
   Figure~\ref{fig:non-injective-projection} provides a schematic illustration of this
   many-to-one projection mechanism.
@@ -153,26 +158,22 @@
   When this condition fails, Bell-type correlations may arise without violating
   local causality at the underlying level.
 
-  \subsection*{Non-injectivity as a saturation effect}
+  \subsection*{Non-injectivity as a finite-capacity effect}
 
     The non-injective character of the projection
-    $\Pi : \Omega \to \mathcal{O}$ considered throughout this work should not be
-    interpreted as an abstract or ad hoc assumption.
-    In physically relevant realizations, non-injectivity arises naturally when the
-    effective description $\mathcal{O}$ reaches a structural saturation, in the sense
-    that it cannot encode all relational constraints present at the level of the
-    underlying configuration space $\Omega$.
+    $\Pi : \Omega \to \mathcal{O}$ should not be interpreted as an abstract or ad hoc assumption.
+    It arises naturally when the effective description $\mathcal{O}$ has a finite
+    capacity to encode distinctions present in the underlying configuration space $\Omega$.
 
     In such regimes, multiple distinct configurations $\omega \in \Omega$ become
     indistinguishable within the effective description, leading to an objective loss
     of injectivity of the projection.
     This loss is structural rather than epistemic: it reflects a limitation of the
-    effective representation itself, not an incomplete specification of underlying
-    variables.
+    effective representation itself, not an incomplete specification of underlying variables.
 
-    The resulting multiplicity of pre-images $\Pi^{-1}(o)$ for a given observable
-    outcome $o \in \mathcal{O}$ naturally defines a structural entropy associated with
-    the projection,
+    The multiplicity of pre-images $\Pi^{-1}(o)$ for a given observable outcome
+    $o \in \mathcal{O}$ naturally defines a structural entropy associated with the
+    projection,
     \[
       S_{\Pi} \equiv -\sum_{o \in \mathcal{O}} \nu(o)\,\log \nu(o),
       \qquad
@@ -182,11 +183,18 @@
     This \emph{projection entropy} quantifies the degree of non-injectivity of the
     effective description and is independent of any notion of epistemic ignorance.
 
-    Within this perspective, the breakdown of probabilistic factorization derived in
-    the present work can be understood as the minimal informational manifestation of
-    such a saturation mechanism.
-    Violations of Bell-type inequalities correspond to the weakest regime in which
-    projection-induced non-injectivity becomes operationally observable, without
-    invoking nonlocal dynamics, retrocausal influences, or hidden-variable completions.
-    Bell-type correlations may therefore be interpreted as the
-    minimal observable signature of a non-zero projection entropy $S_{\Pi}$.
+    From this perspective, the breakdown of probabilistic factorization can be understood
+    as a consequence of operating in a regime where the effective capacity is not large
+    compared to the set of accessible configurations.
+    In such finite-capacity regimes, distinct underlying configurations necessarily
+    overlap at the level of observables, and factorization fails.
+
+    Conversely, when the effective capacity is large compared to the occupied portion
+    of configuration space, the mapping becomes approximately injective and standard
+    factorizable descriptions are recovered.
+
+    Violations of Bell-type inequalities thus correspond to the minimal regime in which
+    finite-capacity effects become operationally observable.
+    They can be interpreted as the weakest observable signature of a non-zero projection
+    entropy $S_{\Pi}$, without invoking nonlocal dynamics, retrocausal influences, or
+    hidden-variable completions.

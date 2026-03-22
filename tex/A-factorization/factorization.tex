@@ -16,6 +16,8 @@
   where $\mathcal{O}$ denotes the space of observable descriptions.
   We assume that $\Pi$ is non-injective, so that there exist distinct
   $\omega_1 \neq \omega_2$ such that $\Pi(\omega_1)=\Pi(\omega_2)$.
+  Such non-injectivity arises generically when the effective description $\mathcal{O}$
+  has a finite capacity to encode distinctions present in $\Omega$.
 
   Let $A$ and $B$ denote two spacelike separated measurement settings, and let
   $a \in \mathcal{O}_A$ and $b \in \mathcal{O}_B$ denote the corresponding observable
@@ -56,8 +58,8 @@
   As a result, conditioning on $\lambda$ does not isolate independent contributions
   associated with $A$ and $B$.
 
-  More formally, if $\lambda$ is a function of $\Pi(\omega)$, then $\lambda$ is constant
-  over each equivalence class $[\omega]$.
+  More formally, if $\lambda$ is a measurable function of $\Pi(\omega)$, then $\lambda$
+  is constant over each equivalence class $[\omega]$.
   The joint probability conditioned on $\lambda$ therefore takes the form
   \begin{equation}
     P(a,b \mid A,B,\lambda)
@@ -65,8 +67,8 @@
     \sum_{\omega \in [\omega_\lambda]} \mu(\omega \mid \lambda),
   \end{equation}
   which does not decompose into a product of independent marginal terms unless
-  additional constraints are imposed.
-  In generic non-injective cases, such constraints are absent, and factorization fails.
+  additional constraints are imposed that effectively restore injectivity.
+  In generic finite-capacity regimes, such constraints are absent, and factorization fails.
 
   This establishes that non-injectivity of the mapping from underlying configurations
   to observable descriptions is sufficient to obstruct any representation of the form
@@ -78,4 +80,4 @@
   The result emphasizes that Bell inequalities apply only to effective descriptions
   admitting an injective or equivalently factorizable representation.
   When observable outcomes arise through non-injective projections, violations of Bell
-  inequalities are a natural and generic consequence of the descriptive structure itself.
+  inequalities are a natural and generic consequence of finite-capacity effective descriptions.
