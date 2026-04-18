@@ -135,7 +135,27 @@ probabilistic factorization; locality; quantum foundations}
     It is closely related in spirit to contextuality-based approaches, in which observable
     statistics arise from coarse-grained descriptions of a richer underlying state space,
     and to general analyses of probabilistic representations in which observable variables
-    do not admit a jointly factorizable completion.
+    do not admit a jointly factorizable completion~\cite{Dzhafarov2017,AbramskyBrandenburger2011,Amaral2018}.
+    As noted by Shimony and elaborated in the probabilistic framework of Dzhafarov and
+    Kujala~\cite{Dzhafarov2017}, violations of Bell inequalities demonstrate the presence
+    of contextuality rather than nonlocality per se; Sulis has further shown that such
+    violations require at least one joint probability to be non-factorisable, establishing
+    non-factorisability as a necessary condition for violation~\cite{Sulis2025}.
+
+    The present work shares this structural perspective but differs in a crucial respect.
+    In contextuality-based approaches, non-factorisability is typically introduced at the
+    level of probabilistic descriptions and may apply to any system, quantum or classical,
+    that admits a contextual probabilistic model — including systems arising in psychology
+    or economics~\cite{Haven2014,Sulis2025}.
+    Here, by contrast, non-factorisability is derived as a structural consequence of a
+    specific physical constraint: the non-injective character of the projection from an
+    underlying configuration space to the effective observable description.
+    This projection is not postulated for modelling purposes, but arises naturally in
+    relational frameworks where observable descriptions emerge from a higher-dimensional
+    configuration space with non-trivial fibre structure~\cite{Beau2026a}.
+    The result is that non-injectivity provides a \emph{sufficient} structural condition
+    for the failure of Bell factorizability, complementing the necessary-condition results
+    established in the contextuality literature.
 
     We further argue that such non-injectivity is not an arbitrary feature, but the natural
     consequence of a finite descriptive capacity of effective observables.
@@ -492,7 +512,17 @@ probabilistic factorization; locality; quantum foundations}
         \item $\sigma = 1$: maximal overlap, $S = 4$ (algebraic bound).
       \end{itemize}
 
-      The present paper is intentionally formulated at a level prior to the full
+      The two boundary conditions on $\Phi$ are exact consequences of the framework:
+      the classical bound $S = 2$ is recovered when $\Pi$ is injective ($\sigma = 0$),
+      and the algebraic bound $S = 4$ is attained when the projection is maximally
+      non-injective ($\sigma = 1$), as illustrated by the PR-box construction of
+      Appendix~\ref{app:toy-model}.
+      The specific functional form of $\Phi(\sigma)$ for intermediate values is not
+      determined at the present level of analysis and should be regarded as a
+      phenomenological interpolation.
+      Additional structural constraints — in particular the admissibility conditions
+      that select the quantum correlation set within the space of non-factorisable models,
+      as developed in companion work~\cite{Beau2026m} — are needed to fix $\Phi$ analytically.
       operator-algebraic structure of quantum theory.
       The mechanism it identifies — non-injective projection as the structural origin of
       Bell-type factorisation failure — is independent of any quantum postulate and operates
@@ -835,8 +865,62 @@ probabilistic factorization; locality; quantum foundations}
       of finite-capacity effective descriptions in which observable outcomes are treated as
       independently specifiable local properties.
 
+    \subsection{Relation to the contextuality literature}
+      \label{subsec:contextuality-literature}
+
+      A substantial body of work has examined Bell-inequality violations within
+      probabilistic frameworks that invoke contextuality rather than nonlocality.
+      Dzhafarov and Kujala~\cite{Dzhafarov2017} have developed a rigorous probabilistic
+      theory of contextuality applicable to any system for which joint distributions across
+      measurement contexts are well defined, including systems arising in psychology and
+      decision making~\cite{Sulis2025}.
+      Abramsky and Brandenburger~\cite{AbramskyBrandenburger2011} have characterised
+      contextuality as an obstruction to globally consistent probability models in sheaf-theoretic
+      terms, and Amaral and Cunha~\cite{Amaral2018} have analysed the graph-theoretic
+      structure of contextuality scenarios.
+      Khrennikov and collaborators have explored probabilistic models of Bell violations
+      beyond quantum mechanics~\cite{Haven2014}.
+      Sulis has shown that the violation of a Bell-type inequality — more precisely a
+      Dzhafarov inequality for a four-cycle scenario — requires that at least one joint
+      probability be non-factorisable~\cite{Sulis2025}: non-factorisability is therefore
+      a necessary condition for violation.
+
+      The present work complements this literature by identifying a \emph{sufficient}
+      structural condition for non-factorisability.
+      The key distinction is the following.
+      In contextuality-based approaches, non-factorisability is a feature of the
+      probabilistic model and may be introduced for any system that admits a contextual
+      description, whether quantum, classical, or outside of physics entirely.
+      Here, non-factorisability is instead derived as a consequence of a structural
+      constraint on the effective description: the non-injective character of the projection
+      $\Pi : \Omega \to \mathcal{O}$ from an underlying configuration space to the observable
+      space.
+      This projection is not postulated as a modelling device, but arises naturally in
+      physical frameworks where observable descriptions emerge from a higher-dimensional
+      relational configuration space with non-trivial fibre structure~\cite{Beau2026a}.
+
+      As a consequence, the present approach has a different explanatory direction.
+      Contextuality-based results establish \emph{when} factorisability fails.
+      The present result establishes \emph{why}: the fibre geometry of the effective
+      description makes a factorised hidden-variable representation impossible.
+      In this sense, the non-injective projection mechanism provides a structural
+      underpinning for the contextuality phenomena identified in the probabilistic
+      literature, rather than a competing account.
+
+      Finally, we note that Bell-type inequality violations are not exclusive to quantum
+      systems and arise in classical contextual settings including decision
+      making~\cite{Sulis2025} and social science~\cite{Haven2014}.
+      The present mechanism applies equally in principle to any system whose effective
+      description arises through a non-injective projection.
+      However, the companion programme~\cite{Beau2026m} shows that when the admissibility
+      constraints of the physical framework are imposed, the mechanism selects specifically
+      quantum-mechanical structures — the singlet correlator, the Born rule, and the
+      Tsirelson bound — without additional postulates.
+      This distinguishes the physical realisation from the broader class of contextual
+      probabilistic models.
+
     \subsection{Relation to quantum operator frameworks}
-      \label{sec:operator}
+      \label{subsec:operator}
 
       The analysis developed in this paper is formulated in a measure-theoretic language,
       with a non-injective map $\Pi : \Omega \to \mathcal{O}$ from an underlying configuration
