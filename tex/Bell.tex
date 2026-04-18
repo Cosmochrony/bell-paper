@@ -390,25 +390,21 @@ probabilistic factorization; locality; quantum foundations}
 
     \paragraph{Remark on factorisability.}
     The formal proof that non-injectivity is sufficient to obstruct any
-    factorisable representation of the joint probability distribution is
-    given in Appendix~\ref{app:factorization}.
-    The argument does not rely on any assumption about the dynamical origin or
-    interpretation of the information loss, but only on the structure of the
-    equivalence classes $\Pi^{-1}(a,b)$.
-    The logical chain is the following.
-    When $\Pi$ is non-injective, any candidate hidden variable $\lambda$ constructed
-    from observable data must be constant over entire equivalence classes $[\omega]$,
-    since distinct configurations in the same class are indistinguishable at the
-    effective level.
-    Conditioning on such a $\lambda$ therefore does not isolate the independent local
-    contributions associated with $A$ and $B$: the preimage $\Pi^{-1}(a,b)$ does not
-    decompose into independent subsets associated with each wing.
-    It follows that no $\lambda$ can support a factorised decomposition
-    $P(a,b \mid A,B) = \int P(a \mid A,\lambda)\,P(b \mid B,\lambda)\,\rho(\lambda)\,\mathrm{d}\lambda$,
-    and factorisation fails as a structural consequence of non-injectivity alone.
-    Non-injectivity does not merely introduce ambiguity; it constrains the space of
-    admissible joint configurations in a way that makes a factorised description
-    impossible.
+    factorisable representation is given in Appendix~\ref{app:factorization}.
+    The logical chain rests entirely on the projection geometry.
+    Non-injectivity implies that distinct underlying states $\omega_1 \neq \omega_2$ satisfy
+    $\Pi(\omega_1) = \Pi(\omega_2)$, so any candidate hidden variable $\lambda$ constructed
+    from observable data must be constant on each equivalence class $[\omega]$.
+    Such a $\lambda$ cannot distinguish elements within the same fibre, so conditioning
+    on it does not isolate the independent contributions of $A$ and $B$; the joint
+    probability conditioned on $\lambda$ still sums over an entire fibre and generically
+    fails to decompose into independent marginals.
+    No refinement of $\lambda$ within the observable algebra can resolve this obstruction:
+    any such refinement leaves the fibre structure — and hence the impossibility of
+    factorisation — intact.
+    The failure of Bell factorisability is therefore a structural consequence of
+    non-injectivity, independent of any assumption about the dynamics or the information
+    loss mechanism, as proved formally in Appendix~\ref{app:factorization}.
 
     \subsection*{Non-injectivity as a finite-capacity effect}
 
@@ -511,6 +507,9 @@ probabilistic factorization; locality; quantum foundations}
       \begin{equation}
         \Phi(0) = 0, \qquad \Phi(1) = 1.
       \end{equation}
+      This relation is phenomenological; its boundary conditions are exact
+      consequences of the framework, while the functional form of $\Phi$ for
+      intermediate $\sigma$ is not determined at the present level of analysis.
 
       This formulation interpolates between three regimes:
 
@@ -840,6 +839,8 @@ probabilistic factorization; locality; quantum foundations}
 
       The mechanism discussed here is complementary in spirit, but identifies a more
       primitive structural origin for the failure of Bell factorizability.
+      In this framework, contextuality is not taken as a primitive property of the
+      probabilistic model, but arises as a consequence of the non-injectivity of $\Pi$.
       Rather than attributing contextuality to context-dependent properties of observables,
       we trace it to the non-injective mapping between underlying configurations and
       observable descriptions.
