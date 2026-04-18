@@ -395,9 +395,17 @@ probabilistic factorization; locality; quantum foundations}
     The argument does not rely on any assumption about the dynamical origin or
     interpretation of the information loss, but only on the structure of the
     equivalence classes $\Pi^{-1}(a,b)$.
-    In particular, the obstruction arises purely from the impossibility of assigning
-    a hidden variable $\lambda$ compatible with a factorised decomposition once
-    distinct underlying configurations are identified at the observable level.
+    The logical chain is the following.
+    When $\Pi$ is non-injective, any candidate hidden variable $\lambda$ constructed
+    from observable data must be constant over entire equivalence classes $[\omega]$,
+    since distinct configurations in the same class are indistinguishable at the
+    effective level.
+    Conditioning on such a $\lambda$ therefore does not isolate the independent local
+    contributions associated with $A$ and $B$: the preimage $\Pi^{-1}(a,b)$ does not
+    decompose into independent subsets associated with each wing.
+    It follows that no $\lambda$ can support a factorised decomposition
+    $P(a,b \mid A,B) = \int P(a \mid A,\lambda)\,P(b \mid B,\lambda)\,\rho(\lambda)\,\mathrm{d}\lambda$,
+    and factorisation fails as a structural consequence of non-injectivity alone.
     Non-injectivity does not merely introduce ambiguity; it constrains the space of
     admissible joint configurations in a way that makes a factorised description
     impossible.
@@ -559,6 +567,10 @@ probabilistic factorization; locality; quantum foundations}
       between projection entropy and observable Bell violations, and defines a testable
       prediction of the present framework: the strength of correlations is controlled by
       the degree of non-injectivity of the effective description.
+      This relation reflects the loss of factorisable structure under
+      projection-induced information compression: as $\sigma$ increases, more underlying
+      distinctions are collapsed at the observable level, deepening the obstruction to any
+      factorised hidden-variable representation.
 
   \section{Bell Inequalities Revisited: Structural vs Dynamical Assumptions}
     \label{sec:abstract-math-model}
