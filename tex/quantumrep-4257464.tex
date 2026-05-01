@@ -26,9 +26,9 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
-\firstpage{1} 
-\makeatletter 
-\setcounter{page}{\@firstpage} 
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
 \makeatother
 \pubvolume{1}
 \issuenum{1}
@@ -36,23 +36,21 @@
 \pubyear{2026}
 \copyrightyear{2026}
 \externaleditor{Yanpeng Zhang}
-\datereceived{29 March 2026} 
+\datereceived{29 March 2026}
 \daterevised{24 April 2026}
-\dateaccepted{28 April 2026} 
-\datepublished{ } 
+\dateaccepted{28 April 2026}
+\datepublished{ }
 
 \Title{Breakdown of Bell Factorization from Non-Injective Effective~Descriptions}
 
 \newcommand{\orcidauthorA}{0009-0001-7697-7868}
 
-\Author{\hl{Jérôme Beau} %MDPI: Please carefully check the accuracy of names and affiliations.
- \orcidA{}}
+\Author{Jérôme Beau \orcidA{}}
 
 \AuthorNames{Jérôme Beau}
 
 \address[1]{%
-\hl{Independent Researcher}; %MDPI: Please provide all information about this address, including the city, postcode, and country.
-jerome.beau@cosmochrony.org}
+  Independent Researcher, Nanterre 92000, France; jerome.beau@cosmochrony.org}
 
 %\corres{Correspondence: jerome.beau@cosmochrony.org}
 
@@ -86,8 +84,7 @@ jerome.beau@cosmochrony.org}
   effective mapping becomes approximately injective.
   In the operator language of quantum theory, the same mechanism admits a natural
   reformulation in terms of reduction to an effective observable subalgebra by a
-  noncommutative conditional \highlighting{expectation}%MDPI: The reference citation should not be in the abstract. Please include this paragraph in the main text, or delete this reference citation
-~\cite{AccardiCecchini1982}.}
+  noncommutative conditional expectation.}
 
 \keyword{Bell inequalities; quantum correlations; non-injective projection;
 probabilistic factorization; locality; quantum foundations}
@@ -157,8 +154,7 @@ probabilistic factorization; locality; quantum foundations}
     relational frameworks where observable descriptions emerge from a higher-dimensional
     configuration space admitting a non-injective projection
     onto observable descriptions~\cite{Beau2026a}.
-    The result is that non-injectivity provides a \emph{\hl{sufficient}} %MDPI: Please confirm if the italics are necessary; if not, please remove them. The~following highlights are the same.
- structural condition
+    The result is that non-injectivity provides a \emph{sufficient} structural condition
     for the failure of Bell factorizability, complementing the necessary-condition results
     established in the contextuality~literature.
 
@@ -222,7 +218,7 @@ probabilistic factorization; locality; quantum foundations}
     Let $\Omega$ denote the space of underlying configurations.
     This space represents a structural configuration space underlying the effective
     description, rather than a physical state space evolving in spacetime.
-    Observable outcomes are defined through a \hl{projection} %MDPI: Please ensure all variables/values in the equation appear in the same format in the text (normal/italic/bold/subscript/superscript).
+    Observable outcomes are defined through a projection
 \begin{equation}
       \Pi : \Omega \rightarrow \mathcal{O},
     \end{equation}
@@ -301,7 +297,7 @@ probabilistic factorization; locality; quantum foundations}
     \draw[arr, line width=1.2pt]
     ($(Omega.east)+(0.15,0)$) --
     node[above, font=\normalsize] {$\Pi$}
-    node[below, font=\footnotesize] {information loss}
+    node[below, font=\footnotesize] {Information loss}
     ($(Obs.west)+(-0.15,0)$);
 
     % Many-to-one arrows
@@ -332,15 +328,14 @@ probabilistic factorization; locality; quantum foundations}
     {Observables identify\\equivalence classes.};
 
       \end{tikzpicture}
-      \caption{\hl{Schematic} %MDPI: Please confirm if overlapped contents matter for readability.
- non-injective projection from the underlying configuration space
+      \caption{Schematic non-injective projection from the underlying configuration space
         $\Omega$ to the observable outcome space $O_A \times O_B$.
         Multiple underlying configurations correspond to the same observable pair $(a,b)$,
         defining equivalence classes.
         This many-to-one identification induces a generic failure of probabilistic factorization
         at the observable level without requiring nonlocal dynamics.}
       \label{fig:non-injective-projection}
-    \end{figure} %EE: Attention AE: Please edit "information loss" to "Information loss".
+    \end{figure}
 
     Let $A$ and $B$ denote two spacelike separated measurement settings, with~corresponding
     observable outcomes $a \in \mathcal{O}_A$ and $b \in \mathcal{O}_B$.
@@ -349,13 +344,13 @@ probabilistic factorization; locality; quantum foundations}
 \begin{equation}
       P(a,b \mid A,B,\lambda) = P(a \mid A,\lambda)\,P(b \mid B,\lambda).
     \end{equation}
-    
-    \hl{Bell} %MDPI: We added indent of the paragraph. Please confirm. The following highlights are the same.
- inequalities follow from this factorization together with statistical independence
+
+    Bell inequalities follow from this factorization together with statistical independence
     assumptions on $\lambda$.
 
     In the present framework, no such factorization is generically available.
-    Because the observable outcomes are obtained through the projection $\Pi$, the    probability distribution accessible at the effective level is given by
+    Because the observable outcomes are obtained through the projection $\Pi$,
+    the probability distribution accessible at the effective level is given by
 \begin{equation}
       P(a,b \mid A,B) =
       \sum_{\omega \in \Pi^{-1}(a,b)}
@@ -394,7 +389,7 @@ probabilistic factorization; locality; quantum foundations}
     When this condition fails, Bell-type correlations may arise without violating
     local causality at the underlying~level.
 
-    \subsection{\highlighting{Remark on Factorisability}} %MDPI: We changed this into 2nd level section title and add section number before. Please confirm. The following highlights are the same.
+    \subsection{Remark on Factorisability}
       The formal proof that non-injectivity is sufficient to obstruct any
       factorisable representation is given in Appendix~\ref{app:factorization}.
       The logical chain rests entirely on the projection geometry.
@@ -413,7 +408,7 @@ probabilistic factorization; locality; quantum foundations}
       non-injectivity, independent of any assumption about the dynamics or the information
       loss mechanism, as~proved formally in Appendix~\ref{app:factorization}.
 
-  \subsection{\highlighting{Non-Injectivity as a Finite-Capacity Effect}}
+  \subsection{Non-Injectivity as a Finite-Capacity Effect}
 
   The non-injective character of the projection
   $\Pi : \Omega \to \mathcal{O}$ should not be interpreted as an abstract or ad~hoc assumption.
@@ -455,11 +450,11 @@ probabilistic factorization; locality; quantum foundations}
   Violations of Bell-type inequalities thus correspond to the minimal regime in which
   finite-capacity effects become operationally observable.
   They can be interpreted as the weakest observable signature of a non-zero projection
-  entropy $S_{\Pi}$, without~invoking nonlocal dynamics, retrocausal influences, or  hidden-variable completions.
+  entropy $S_{\Pi}$, without~invoking nonlocal dynamics, retrocausal influences, or hidden-variable completions.
   This suggests that the magnitude of Bell-type violations may be quantitatively
   controlled by the projection entropy $S_{\Pi}$.
 
- \subsection{\highlighting{Structural Versus Arbitrary Information Loss}}
+ \subsection{Structural Versus Arbitrary Information Loss}
     The information loss associated with non-injective projection is not arbitrary.
     It is entirely determined by the geometric structure of the fibres
     $\Pi^{-1}(o)$, which encode the finite projective capacity of the effective
@@ -477,8 +472,7 @@ probabilistic factorization; locality; quantum foundations}
     loss and the ``controlled'' character of quantum correlations is resolved: both
     are consequences of the same underlying fibre~geometry.
 
-   \subsection{\highlighting{Quantitative} %MDPI: We renumbered the subsection numbers. Please confirm.
-   Bounds from Projection~Entropy}
+   \subsection{Quantitative Bounds from Projection~Entropy}
   \label{subsec:projection-entropy-bound}
 
   The structural analysis developed above identifies non-injectivity as a sufficient
@@ -514,8 +508,8 @@ probabilistic factorization; locality; quantum foundations}
 \begin{equation}
     \Phi(0) = 0, \qquad \Phi(1) = 1.
   \end{equation}
-  
-  \hl{This} relation is phenomenological; its boundary conditions are exact
+
+  This relation is phenomenological; its boundary conditions are exact
   consequences of the framework, while the functional form of $\Phi$ for
   intermediate $\sigma$ is not determined at the present level of~analysis.
 
@@ -838,7 +832,7 @@ probabilistic factorization; locality; quantum foundations}
     correlations may be understood as obstructions to constructing globally consistent
     probabilistic models from local measurement contexts~\cite{AbramskyBrandenburger2011}.
     Within ontological-model frameworks, observable statistics are likewise interpreted
-    as coarse-grained descriptions of an underlying ontic state space~\cite{Spekkens2007}.
+    as coarse-grained descriptions of an underlying ontic state space~\cite{Spekkens2007Epistemic}.
     These approaches identify contextuality as a fundamental feature of quantum theory,
     reflecting the impossibility of assigning outcome values independently of the
     measurement~context.
@@ -905,7 +899,7 @@ probabilistic factorization; locality; quantum foundations}
     probability be non-factorisable~\cite{Sulis2025}: non-factorisability is therefore
     a necessary condition for~violation.
 
-    The present work complements this literature by identifying a \emph{\hl{sufficient}}
+    The present work complements this literature by identifying a \emph{sufficient}
     structural condition for non-factorisability.
     The key distinction is the following.
     In contextuality-based approaches, non-factorisability is a feature of the
@@ -921,8 +915,8 @@ probabilistic factorization; locality; quantum foundations}
     onto observable descriptions~\cite{Beau2026a}.
 
     As a consequence, the~present approach has a different explanatory direction.
-    Contextuality-based results establish \emph{\hl{when}} factorisability fails.
-    The present result establishes \emph{\hl{why}}: the fibre geometry of the effective
+    Contextuality-based results establish \emph{when} factorisability fails.
+    The present result establishes \emph{why}: the fibre geometry of the effective
     description makes a factorised hidden-variable representation impossible.
     In this sense, the~non-injective projection mechanism provides a structural
     underpinning for the contextuality phenomena identified in the probabilistic
@@ -1046,12 +1040,11 @@ probabilistic factorization; locality; quantum foundations}
   non-injective character of the effective~description.
 \vspace{6pt}
 
-\funding{\hl{This research received no external funding.}} %MDPI: Please confirm if this statement is correct.
+\funding{This research received no external funding.}
 
-\dataavailability{\hl{No new data were created or analyzed in this study. Data sharing is not applicable to this article.}} %MDPI: Please confirm if this statement is correct.
+\dataavailability{No new data were created or analyzed in this study. Data sharing is not applicable to this article.}
 
-    \acknowledgments{\hl{The author} %MDPI: Please ensure that all individuals included in this section have consented to the acknowledgement.
- acknowledges the use of large language models as a
+    \acknowledgments{The author acknowledges the use of large language models as a
     supportive tool for refining language, structure, and~internal consistency
     during the development of this manuscript. All conceptual contributions,
       theoretical choices, and~interpretations remain the sole responsibility of the~author.}
@@ -1080,8 +1073,8 @@ probabilistic factorization; locality; quantum foundations}
 
   Let $(\Omega,\Sigma,\mu)$ be a probability space describing underlying configurations
   $\omega \in \Omega$, equipped with a normalized measure $\mu$.
-  Observable outcomes are obtained through a measurable \hl{mapping} %MDPI: Figures, tables, and equations in the Appendix should be marked as “Figure A1, Table A1, Equation (A1)”, etc. We have corrected all equation numbers. Please confirm these revisions.
-\begin{equation}
+  Observable outcomes are obtained through a measurable mapping
+  \begin{equation}
     \Pi : \Omega \rightarrow \mathcal{O},
   \end{equation}
   where $\mathcal{O}$ denotes the space of observable descriptions.
@@ -1114,8 +1107,8 @@ probabilistic factorization; locality; quantum foundations}
     P(b \mid B,\lambda).
     \label{eq:bell-factorization}
   \end{equation}
-  
-  \hl{This} representation implicitly assumes that $\lambda$ provides a complete and
+
+  This representation implicitly assumes that $\lambda$ provides a complete and
   non-redundant parameterization of the relevant underlying configurations for the
   observable~outcomes.
 
@@ -1300,7 +1293,7 @@ probabilistic factorization; locality; quantum foundations}
 
 %    \medskip
 %    \noindent
-    \subsubsection*{\highlighting{Realization as a Projected Description}} %MDPI: We changed this into 3rd level section title. Please confirm.
+    \subsubsection*{Realization as a Projected Description}
     \textls[-15]{Define an underlying finite configuration space
     $\Omega \equiv \{(a_0,a_1,b_0,b_1)\,|\,a_x,b_y\in\{-1,+1\}\}$} equipped with a
     normalized measure $\mu$ supported only on the subset satisfying the global
@@ -1309,8 +1302,8 @@ probabilistic factorization; locality; quantum foundations}
       a_0 b_0 = a_0 b_1 = a_1 b_0 = +1, \qquad a_1 b_1 = -1.
       \label{eq:global_constraint}
     \end{equation}
-    
-    \hl{This} constraint encodes a non-factorizable relational structure at the level of
+
+    This constraint encodes a non-factorizable relational structure at the level of
     $\Omega$, consistent with the absence of subsystem decomposition assumed in
     Appendix~\ref{subsec:underlying-configuration-space}--\ref{subsec:emergence-of-correlations}.
 
@@ -1320,8 +1313,8 @@ probabilistic factorization; locality; quantum foundations}
       \Pi(\omega,x,y) \;=\; (a_x,b_y).
       \label{eq:contextual_projection}
     \end{equation}
-    
-    \hl{This} formulation makes explicit that the underlying configuration $\omega$ is
+
+    This formulation makes explicit that the underlying configuration $\omega$ is
     independent of the measurement settings, which merely select which components are
     read out.
     The dependence on $(x,y)$ therefore does not introduce contextual hidden variables,
@@ -1335,14 +1328,14 @@ probabilistic factorization; locality; quantum foundations}
       P(a,b|x,y) \;=\; \mu\!\left(\Pi_{x,y}^{-1}(a,b)\right).
       \label{eq:projected_probabilities_chsh}
     \end{equation}
-    
-    \hl{For} a symmetric choice of $\mu$ on the constrained subset
+
+    For a symmetric choice of $\mu$ on the constrained subset
     Equation~\eqref{eq:global_constraint}, this reproduces exactly the distribution
     Equation~\eqref{eq:prbox_distribution}.
 
 %    \medskip
 %    \noindent
-    \hl{This} construction shows explicitly that a maximal CHSH violation can arise from a
+    This construction shows explicitly that a maximal CHSH violation can arise from a
     non-injective projection applied to an underlying configuration space with global
     constraints, without~requiring any superluminal influence.
     The use of maximal correlations is for illustrative purposes only and does not
@@ -1431,16 +1424,16 @@ Haven, E.; Khrennikov, A.
 Beau, J.
 \newblock Relational Reconstruction of Spacetime Geometry from Graph
   Laplacians.
-\newblock {\em Zenodo} {\bf \hl{2026}}. %MDPI: We removed ``Companion paper,'' behind. Please confirm.
-\newblock %Companion paper,
+\newblock {\em Zenodo} {\bf 2026}.
+\newblock
  {\url{https://doi.org/10.5281/zenodo.18356037}}.
 
 \bibitem[Beau(2026{\natexlab{b}})]{Q1}
 Beau, J.
 \newblock From Admissibility to Quantum Structure: Phase Coherence and
-  Correlations from Non-Injective Projection. {\em\hl{ Zenodo}} %MDPI: Newly added journal information. Please confirm.
-\hl{\textbf{2026}}. %MDPI: We removed ``Cosmochrony companion paper Q1,'' behind. Please confirm.
-\newblock %Cosmochrony companion paper Q1,
+  Correlations from Non-Injective Projection.
+\newblock {\em Zenodo} {\bf 2026}.
+  \newblock
   {\url{https://doi.org/10.5281/zenodo.19561060}}.
 
 \bibitem[Tsirelson(1980)]{Tsirelson1980}
@@ -1488,14 +1481,8 @@ Kochen, S.; Specker, E.P.
   17},~59--87.
 \newblock {\url{https://doi.org/10.1512/iumj.1968.17.17004}}.
 
-\bibitem[Spekkens(2007{\natexlab{a}})]{Spekkens2007Epistemic}
-\hl{Spekkens, R.W.} %MDPI: Refs. 16 and 17 are duplicated. Please remove duplicated references and rearrange all the references so that they appear in numerical order. Please ensure that there are no duplicated references.
-\newblock Evidence for the epistemic view of quantum states.
-\newblock {\em Phys. Rev. A} {\bf 2007}, {\em 75},~032110.
-\newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
-
-\bibitem[Spekkens(2007{\natexlab{b}})]{Spekkens2007}
-\hl{Spekkens, R.W.}
+\bibitem[Spekkens(2007)]{Spekkens2007Epistemic}
+Spekkens, R.W.
 \newblock Evidence for the Epistemic View of Quantum States: A Toy Theory.
 \newblock {\em Phys. Rev. A} {\bf 2007}, {\em 75},~032110.
 \newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
