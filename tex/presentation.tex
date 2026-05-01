@@ -1,0 +1,224 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{amsmath}
+
+\title{Breakdown of Bell Factorization\\
+from Non-Injective Effective Descriptions}
+\author{Jérôme Beau}
+\institute{Independent Researcher\\Cosmochrony Programme}
+\date{\today}
+
+\begin{document}
+
+  \frame{\titlepage}
+
+  \begin{frame}{Motivation}
+    \begin{itemize}
+      \item Bell inequalities are experimentally violated
+      \item Standard interpretations:
+      \begin{itemize}
+        \item Nonlocality
+        \item Abandonment of realism
+      \end{itemize}
+      \item But Bell inequalities constrain probabilistic structure
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Key point:} Bell constrains factorizability, not dynamics
+  \end{frame}
+
+  \begin{frame}{Key Question}
+    \begin{itemize}
+      \item Why should observable variables be factorizable?
+      \item Standard assumption:
+      \begin{itemize}
+        \item Existence of a global underlying description
+        \item Simultaneous assignment of all outcomes
+      \end{itemize}
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Question:} What if this assumption fails structurally?
+  \end{frame}
+
+  \begin{frame}{Core Idea}
+    Observable states arise from a projection:
+    \[
+      \Pi : \Omega \to \mathcal{O}
+    \]
+
+    \begin{itemize}
+      \item $\Omega$: underlying configuration space
+      \item $\mathcal{O}$: observable outcomes
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Assumption:} $\Pi$ is non-injective
+
+    \medskip
+
+    Multiple configurations map to the same observable outcome
+  \end{frame}
+
+  \begin{frame}{Consequence}
+    \begin{itemize}
+      \item Observable outcomes are not single configurations
+      \item They correspond to equivalence classes
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Interpretation:}
+    \begin{itemize}
+      \item Information is lost under projection
+      \item Observable variables are coarse-grained
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Bell Factorization}
+    Bell assumes:
+    \[
+      P(A,B \mid \lambda) = P(A \mid \lambda) \, P(B \mid \lambda)
+    \]
+
+    \begin{itemize}
+      \item $\lambda$: underlying state
+      \item Requires a joint assignment of all outcomes
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Implicit assumption:} existence of a single consistent $\lambda$
+  \end{frame}
+
+  \begin{frame}{Where It Breaks}
+    \begin{itemize}
+      \item Observable outcomes arise from multiple configurations
+      \item Different measurements may correspond to different $\lambda$
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Result:}
+    \begin{itemize}
+      \item No global assignment of all observables
+      \item Factorization cannot be consistently defined
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Key Result}
+    \begin{itemize}
+      \item Non-injective projection prevents simultaneous assignment
+      \item Bell factorizability assumption does not apply
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Conclusion:}
+    \begin{itemize}
+      \item Bell inequalities may fail without nonlocal dynamics
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Intuition}
+    \begin{block}{Classical}
+      One underlying state $\rightarrow$ one observable description
+
+      Global assignment exists $\rightarrow$ factorization
+    \end{block}
+
+    \begin{block}{Non-injective}
+      Multiple underlying states $\rightarrow$ one observable
+
+      No global assignment $\rightarrow$ no factorization
+    \end{block}
+  \end{frame}
+
+  \begin{frame}{Toy Model}
+    \begin{itemize}
+      \item Explicit construction
+      \item Produces Bell--CHSH violations
+      \item Preserves:
+      \begin{itemize}
+        \item No-signalling
+        \item Measurement independence
+      \end{itemize}
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Violations arise from projection structure}
+  \end{frame}
+
+  \begin{frame}{What This Does Not Claim}
+    \begin{itemize}
+      \item No modification of quantum mechanics
+      \item No additional hidden-variable dynamics
+      \item No superluminal influence
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{What This Shows}
+    \begin{itemize}
+      \item Factorization is not structurally guaranteed
+      \item Non-injectivity provides a sufficient mechanism
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Bell violations can arise from description alone}
+  \end{frame}
+
+  \begin{frame}{Classical Limit}
+    \begin{itemize}
+      \item When projection becomes approximately injective:
+      \begin{itemize}
+        \item Underlying configurations become distinguishable
+        \item Global assignment is approximately restored
+      \end{itemize}
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Classical factorization emerges as a limit}
+  \end{frame}
+
+  \begin{frame}{Conceptual Message}
+    \begin{itemize}
+      \item Bell inequalities constrain factorizability
+      \item Not necessarily locality or realism
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Non-factorizability can be structural}
+  \end{frame}
+
+  \begin{frame}{Conclusion}
+    \begin{itemize}
+      \item Non-injectivity $\Rightarrow$ no global assignment
+      \item No assignment $\Rightarrow$ no factorization
+      \item No factorization $\Rightarrow$ Bell violations
+    \end{itemize}
+
+    \medskip
+
+    \textbf{Purely structural origin}
+  \end{frame}
+
+  \begin{frame}{Discussion}
+    \begin{itemize}
+      \item Relation to contextuality
+      \item Relation to quantum probability
+      \item Operator-algebraic formulation
+      \item Extensions within Cosmochrony
+    \end{itemize}
+  \end{frame}
+
+\end{document}
