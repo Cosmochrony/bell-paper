@@ -1,0 +1,117 @@
+\begin{thebibliography}{999}
+
+\bibitem[Accardi and Cecchini(1982)]{AccardiCecchini1982}
+Accardi, L.; Cecchini, C.
+\newblock Conditional expectations in von {Neumann} algebras and a theorem of
+  {Takesaki}.
+\newblock {\em Journal of Functional Analysis} {\bf 1982}, {\em 45},~245--273.
+\newblock {\url{https://doi.org/10.1016/0022-1236(82)90022-2}}.
+
+\bibitem[Dzhafarov and Kujala(2017)]{Dzhafarov2017}
+Dzhafarov, E.N.; Kujala, J.V.
+\newblock Probabilistic foundations of contextuality.
+\newblock {\em Fortschritte der Physik} {\bf 2017}, {\em 65},~1600040.
+\newblock {\url{https://doi.org/10.1002/prop.201600040}}.
+
+\bibitem[Abramsky and Brandenburger(2011)]{AbramskyBrandenburger2011}
+Abramsky, S.; Brandenburger, A.
+\newblock The Sheaf-Theoretic Structure of Non-Locality and Contextuality.
+\newblock {\em New Journal of Physics} {\bf 2011}, {\em 13},~113036.
+\newblock {\url{https://doi.org/10.1088/1367-2630/13/11/113036}}.
+
+\bibitem[Amaral and Cunha(2018)]{Amaral2018}
+Amaral, B.; Cunha, M.T.
+\newblock {\em On Graph Approaches to Contextuality and Their Role in Quantum
+  Theory}; Springer: Cham,  2018.
+\newblock {\url{https://doi.org/10.1007/978-3-319-93827-1}}.
+
+\bibitem[Sulis(2025)]{Sulis2025}
+Sulis, W.
+\newblock Transitivity, Contextuality, and Decision Making.
+\newblock {\em Philosophical Transactions of the Royal Society A} {\bf 2025},
+  {\em 383},~20240373.
+\newblock {\url{https://doi.org/10.1098/rsta.2024.0373}}.
+
+\bibitem[Haven and Khrennikov(2014)]{Haven2014}
+Haven, E.; Khrennikov, A.
+\newblock {\em Quantum Social Science}; Cambridge University Press: Cambridge,
+  2014.
+\newblock {\url{https://doi.org/10.1017/CBO9781139003261}}.
+
+\bibitem[Beau(2026{\natexlab{a}})]{Beau2026a}
+Beau, J.
+\newblock Relational Reconstruction of Spacetime Geometry from Graph
+  Laplacians.
+\newblock {\em Zenodo} {\bf 2026}.
+\newblock Companion paper, {\url{https://doi.org/10.5281/zenodo.18356037}}.
+
+\bibitem[Beau(2026{\natexlab{b}})]{Q1}
+Beau, J.
+\newblock From Admissibility to Quantum Structure: Phase Coherence and
+  Correlations from Non-Injective Projection,  2026.
+\newblock Cosmochrony companion paper Q1,
+  {\url{https://doi.org/10.5281/zenodo.19561060}}.
+
+\bibitem[Tsirelson(1980)]{Tsirelson1980}
+Tsirelson, B.S.
+\newblock Quantum generalizations of {Bell}'s inequality.
+\newblock {\em Letters in Mathematical Physics} {\bf 1980}, {\em 4},~93--100.
+\newblock {\url{https://doi.org/10.1007/BF00417500}}.
+
+\bibitem[Brunner et~al.(2014)Brunner, Cavalcanti, Pironio, Scarani, and
+  Wehner]{Brunner2014}
+Brunner, N.; Cavalcanti, D.; Pironio, S.; Scarani, V.; Wehner, S.
+\newblock Bell nonlocality.
+\newblock {\em Reviews of Modern Physics} {\bf 2014}, {\em 86},~419--478.
+\newblock {\url{https://doi.org/10.1103/RevModPhys.86.419}}.
+
+\bibitem[Bell(1964)]{Bell1964}
+Bell, J.S.
+\newblock On the Einstein Podolsky Rosen paradox.
+\newblock {\em Physics Physique Fizika} {\bf 1964}, {\em 1},~195.
+
+\bibitem[Zurek(2003)]{Zurek2003}
+Zurek, W.H.
+\newblock Decoherence, einselection, and the quantum origins of the classical.
+\newblock {\em Reviews of Modern Physics} {\bf 2003}, {\em 75},~715--775.
+\newblock {\url{https://doi.org/10.1103/RevModPhys.75.715}}.
+
+\bibitem['t~Hooft(2016)]{tHooft2016CAI}
+'t~Hooft, G.
+\newblock {\em The Cellular Automaton Interpretation of Quantum Mechanics};
+  Vol. 185, {\em Fundamental Theories of Physics}, Springer,  2016.
+\newblock {\url{https://doi.org/10.1007/978-3-319-41285-6}}.
+
+\bibitem[Hall(2010)]{Hall2010LocalDeterministic}
+Hall, M.J.W.
+\newblock Local deterministic model of singlet state correlations based on
+  relaxing measurement independence.
+\newblock {\em Physical Review Letters} {\bf 2010}, {\em 105},~250404.
+\newblock {\url{https://doi.org/10.1103/PhysRevLett.105.250404}}.
+
+\bibitem[Kochen and Specker(1967)]{KochenSpecker1967}
+Kochen, S.; Specker, E.P.
+\newblock The problem of hidden variables in quantum mechanics.
+\newblock {\em Journal of Mathematics and Mechanics} {\bf 1967}, {\em
+  17},~59--87.
+\newblock {\url{https://doi.org/10.1512/iumj.1968.17.17004}}.
+
+\bibitem[Spekkens(2007{\natexlab{a}})]{Spekkens2007Epistemic}
+Spekkens, R.W.
+\newblock Evidence for the epistemic view of quantum states.
+\newblock {\em Physical Review A} {\bf 2007}, {\em 75},~032110.
+\newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
+
+\bibitem[Spekkens(2007{\natexlab{b}})]{Spekkens2007}
+Spekkens, R.W.
+\newblock Evidence for the Epistemic View of Quantum States: A Toy Theory.
+\newblock {\em Physical Review A} {\bf 2007}, {\em 75},~032110.
+\newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
+
+\bibitem[Nielsen and Chuang(2000)]{NielsenChuang2000}
+Nielsen, M.A.; Chuang, I.L.
+\newblock {\em Quantum Computation and Quantum Information}; Cambridge
+  University Press: Cambridge,  2000.
+\newblock {\url{https://doi.org/10.1017/CBO9780511976667}}.
+
+\end{thebibliography}

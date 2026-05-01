@@ -1,4 +1,4 @@
-\documentclass[entropy,article,submit,pdftex,moreauthors]{Definitions/mdpi}
+\documentclass[quantumrep,article,accept,pdftex,oneauthor]{Definitions/mdpi}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{physics}
@@ -26,34 +26,37 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
-\firstpage{1}
-\setcounter{page}{\@firstpage}
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
 \pubvolume{1}
 \issuenum{1}
 \articlenumber{0}
 \pubyear{2026}
 \copyrightyear{2026}
-\datereceived{ }
-\daterevised{ } % Comment out if no revised date
-\dateaccepted{ }
-\datepublished{ }
-\doinum{}
+\externaleditor{Yanpeng Zhang}
+\datereceived{29 March 2026} 
+\daterevised{24 April 2026}
+\dateaccepted{28 April 2026} 
+\datepublished{ } 
 
-\Title{Breakdown of Bell Factorization from Non-Injective Effective Descriptions}
+\Title{Breakdown of Bell Factorization from Non-Injective Effective~Descriptions}
 
 \newcommand{\orcidauthorA}{0009-0001-7697-7868}
 
-\Author{Jérôme Beau\orcidA{}}
+\Author{\hl{Jérôme Beau} %MDPI: Please carefully check the accuracy of names and affiliations.
+ \orcidA{}}
 
 \AuthorNames{Jérôme Beau}
 
-\address{%
-  \quad Independent Researcher; jerome.beau@cosmochrony.org}
+\address[1]{%
+\hl{Independent Researcher}; %MDPI: Please provide all information about this address, including the city, postcode, and country.
+jerome.beau@cosmochrony.org}
 
-\corres{Correspondence: jerome.beau@cosmochrony.org}
+%\corres{Correspondence: jerome.beau@cosmochrony.org}
 
-\abstract{
-  Violations of Bell inequalities are commonly interpreted as evidence
+\abstract{Violations of Bell inequalities are commonly interpreted as evidence
   for nonlocal influences or as constraints on realist descriptions.
   We show that the failure of Bell-type factorizability arises naturally
   when observable outcomes are obtained through a non-injective mapping
@@ -83,8 +86,8 @@
   effective mapping becomes approximately injective.
   In the operator language of quantum theory, the same mechanism admits a natural
   reformulation in terms of reduction to an effective observable subalgebra by a
-  noncommutative conditional expectation~\cite{AccardiCecchini1982}.
-}
+  noncommutative conditional \highlighting{expectation}%MDPI: The reference citation should not be in the abstract. Please include this paragraph in the main text, or delete this reference citation
+~\cite{AccardiCecchini1982}.}
 
 \keyword{Bell inequalities; quantum correlations; non-injective projection;
 probabilistic factorization; locality; quantum foundations}
@@ -101,7 +104,7 @@ probabilistic factorization; locality; quantum foundations}
     measurement outcomes cannot be reproduced by any local hidden-variable model
     satisfying statistical factorization.
     This empirical fact is commonly interpreted as requiring either nonlocal dynamics,
-    the abandonment of realism, or more radical departures from classical causal intuition.
+    the abandonment of realism, or~more radical departures from classical causal~intuition.
 
     Despite these conclusions, it is important to recall that Bell inequalities do not
     constrain physical dynamics directly.
@@ -109,30 +112,30 @@ probabilistic factorization; locality; quantum foundations}
     specifically the assumption that joint outcome probabilities factorize into independent
     local contributions conditioned on a complete specification of relevant variables.
     In modern terms, this assumption can be analyzed through decompositions of locality
-    conditions into parameter and outcome independence, as emphasized in foundational
+    conditions into parameter and outcome independence, as~emphasized in foundational
     discussions of Bell’s theorem.
     The failure of Bell inequalities therefore indicates a breakdown of effective
-    factorization, but does not, by itself, mandate superluminal influences or causal
+    factorization, but~does not, by~itself, mandate superluminal influences or causal
     nonlocality.
 
     Although the present paper is formulated in a classical measure-theoretic language
-    for maximal transparency, the mechanism studied here is not restricted to commutative
+    for maximal transparency, the~mechanism studied here is not restricted to commutative
     probability.
     A noncommutative reformulation in terms of conditional expectations onto observable
     subalgebras~\cite{AccardiCecchini1982} will be made explicit in Section~\ref{sec:discussion}.
 
     In this work, we explore a general and minimal mechanism by which Bell-type
-    correlations may arise without invoking nonlocal dynamics, retrocausality, or hidden
+    correlations may arise without invoking nonlocal dynamics, retrocausality, or~hidden
     variables.
     The central observation is that effective physical descriptions typically arise through
     many-to-one mappings from underlying configurations to observable outcomes.
     When this mapping is non-injective, distinct underlying configurations correspond
     to the same observable description, leading generically to a loss of factorization at
-    the level of observable probabilities.
+    the level of observable~probabilities.
 
     This mechanism can be viewed as a structural refinement of the assumptions entering
     Bell-type factorizability.
-    It is closely related in spirit to contextuality-based approaches, in which observable
+    It is closely related in spirit to contextuality-based approaches, in~which observable
     statistics arise from coarse-grained descriptions of a richer underlying state space,
     and to general analyses of probabilistic representations in which observable variables
     do not admit a jointly factorizable completion~\cite{Dzhafarov2017,AbramskyBrandenburger2011,Amaral2018}.
@@ -145,34 +148,35 @@ probabilistic factorization; locality; quantum foundations}
     The present work shares this structural perspective but differs in a crucial respect.
     In contextuality-based approaches, non-factorisability is typically introduced at the
     level of probabilistic descriptions and may apply to any system, quantum or classical,
-    that admits a contextual probabilistic model — including systems arising in psychology
+    that admits a contextual probabilistic model---including systems arising in psychology
     or economics~\cite{Haven2014,Sulis2025}.
-    Here, by contrast, non-factorisability is derived as a structural consequence of a
+    Here, by~contrast, non-factorisability is derived as a structural consequence of a
     specific physical constraint: the non-injective character of the projection from an
     underlying configuration space to the effective observable description.
-    This projection is not postulated for modelling purposes, but arises naturally in
+    This projection is not postulated for modelling purposes, but~arises naturally in
     relational frameworks where observable descriptions emerge from a higher-dimensional
     configuration space admitting a non-injective projection
     onto observable descriptions~\cite{Beau2026a}.
-    The result is that non-injectivity provides a \emph{sufficient} structural condition
+    The result is that non-injectivity provides a \emph{\hl{sufficient}} %MDPI: Please confirm if the italics are necessary; if not, please remove them. The~following highlights are the same.
+ structural condition
     for the failure of Bell factorizability, complementing the necessary-condition results
-    established in the contextuality literature.
+    established in the contextuality~literature.
 
-    We further argue that such non-injectivity is not an arbitrary feature, but the natural
+    We further argue that such non-injectivity is not an arbitrary feature, but~the natural
     consequence of a finite descriptive capacity of effective observables.
-    Observable states correspond not to individual microscopic configurations, but to
+    Observable states correspond not to individual microscopic configurations, but~to
     equivalence classes whose multiplicity reflects a bounded resolution of the effective
     description.
     In this sense, non-injectivity can be understood as the manifestation of a finite
     projective capacity, which limits the amount of distinguishable information that can
-    be encoded in observable variables.
+    be encoded in observable~variables.
 
     Within this framework, joint probabilities arise from averaging over entire classes of
     underlying configurations.
-    Even if the underlying dynamics is local and deterministic, the induced probability
+    Even if the underlying dynamics is local and deterministic, the~induced probability
     structure at the observable level does not admit a factorized representation.
     The violation of Bell inequalities is thus traced to a structural property of the
-    descriptive mapping itself, rather than to any dynamical nonlocality.
+    descriptive mapping itself, rather than to any dynamical~nonlocality.
 
     The effective loss of information associated with this projection is not arbitrary.
     In physical realizations, it is controlled by a finite resolution scale, set in quantum
@@ -181,36 +185,36 @@ probabilistic factorization; locality; quantum foundations}
     Quantum states therefore correspond to finite-capacity equivalence classes rather than
     sharply defined microscopic states.
     The breakdown of factorization reflects this irreducible coarse-graining, not an
-    epistemic lack of knowledge.
+    epistemic lack of~knowledge.
 
     This perspective also provides a natural characterization of the quantum-to-classical
     transition.
     In regimes where the effective descriptive capacity is large compared to the occupied
-    state space, the mapping becomes approximately injective.
+    state space, the~mapping becomes approximately injective.
     In this low-occupancy regime, observable probabilities recover an approximately
     factorized form and Bell violations are suppressed.
     Classical statistical independence thus appears as a limiting case of effective
-    injectivity, rather than as a fundamental principle.
+    injectivity, rather than as a fundamental~principle.
 
     The scope of the present work is deliberately restricted.
     We do not propose a modification of quantum dynamics, introduce additional physical
-    degrees of freedom, or advance a specific underlying dynamical model.
+    degrees of freedom, or~advance a specific underlying dynamical model.
     Our analysis is structural in nature and concerns the logical conditions under which
     Bell-type inequalities apply to effective descriptions.
-    By isolating non-injective projection, understood as a finite-capacity effect, as a
+    By isolating non-injective projection, understood as a finite-capacity effect, as~a
     sufficient mechanism for the failure of factorization, we aim to clarify the conceptual
     origin of quantum correlations while preserving both operational locality and the
     empirical content of quantum theory.
     The present work does not introduce new physical predictions.
     Its aim is to identify structural constraints on the class of effective
-    descriptions to which Bell-type inequalities apply.
+    descriptions to which Bell-type inequalities~apply.
 
-    The non-injective projection considered here is not introduced ad hoc, but arises
+    The non-injective projection considered here is not introduced ad~hoc, but~arises
     naturally in relational frameworks in which observable descriptions emerge as
-    projections of a higher-dimensional configuration space, as discussed
+    projections of a higher-dimensional configuration space, as~discussed
     in~\cite{Beau2026a}.
 
-  \section{Non-Injective Projection and the Failure of Bell Factorization}
+  \section{Non-Injective Projection and the Failure of Bell~Factorization}
     \label{sec:non-injective-projection}
 
     We consider a minimal abstract setting in which observable descriptions arise from
@@ -218,19 +222,19 @@ probabilistic factorization; locality; quantum foundations}
     Let $\Omega$ denote the space of underlying configurations.
     This space represents a structural configuration space underlying the effective
     description, rather than a physical state space evolving in spacetime.
-    Observable outcomes are defined through a projection
-    \begin{equation}
+    Observable outcomes are defined through a \hl{projection} %MDPI: Please ensure all variables/values in the equation appear in the same format in the text (normal/italic/bold/subscript/superscript).
+\begin{equation}
       \Pi : \Omega \rightarrow \mathcal{O},
     \end{equation}
     where $\mathcal{O}$ is the space of observable states or measurement outcomes.
-    Crucially, $\Pi$ is assumed to be non-injective, so that multiple distinct elements
-    of $\Omega$ correspond to the same observable description.
+    Crucially, $\Pi$ is assumed to be non-injective so that multiple distinct elements
+    of $\Omega$ correspond to the same observable~description.
 
     Such non-injective mappings arise generically when observable descriptions have
     a finite descriptive capacity.
-    In this case, the effective space $\mathcal{O}$ cannot encode all distinctions
-    present in $\Omega$, and observable states correspond to equivalence classes
-    of underlying configurations rather than to individual elements.
+    In this case, the~effective space $\mathcal{O}$ cannot encode all distinctions
+    present in $\Omega$, and~observable states correspond to equivalence classes
+    of underlying configurations rather than to individual~elements.
 
     Here $\Omega$ denotes an underlying configuration space from which
     effective observables arise through projection.
@@ -241,14 +245,13 @@ probabilistic factorization; locality; quantum foundations}
     or as an ontological completion of quantum mechanics.
     It does not provide additional outcome-defining variables accessible at the effective level.
     Rather, it is introduced as a structural space of admissible configurations underlying
-    the effective description, whose projection properties determine the observable statistics.
+    the effective description, whose projection properties determine the observable~statistics.
 
     Figure~\ref{fig:non-injective-projection} provides a schematic illustration of this
     many-to-one projection mechanism.
     A concrete toy model making this structure explicit is presented in Appendix~\ref{app:toy-model}.
 
-    \begin{figure}[t]
-      \centering
+    \begin{figure}[H]\vspace{-3pt}
       \begin{tikzpicture}[
         font=\small,
         box/.style={draw, rounded corners, align=center, inner sep=6pt},
@@ -268,7 +271,7 @@ probabilistic factorization; locality; quantum foundations}
     \node[above] at (Obs.north) {$O_A \times O_B$};
     \node[below, font=\footnotesize] at (Obs.south) {Observable outcomes};
 
-    % Points in Omega — single column, evenly spaced
+    % Points in Omega---single column, evenly spaced
     \node[pt] (w1) at ($(Omega)+(0,-1.6)$) {};
     \node[pt] (w2) at ($(Omega)+(0,-0.9)$) {};
     \node[pt] (w3) at ($(Omega)+(0,-0.1)$) {};
@@ -283,7 +286,7 @@ probabilistic factorization; locality; quantum foundations}
     \node[font=\footnotesize, anchor=east] at ($(w5)+(-0.12,0)$) {$\omega_5$};
     \node[font=\footnotesize, anchor=east] at ($(w6)+(-0.12,0)$) {$\omega_6$};
 
-    % Points in Obs — evenly spaced vertically
+    % Points in Obs---evenly spaced vertically
     \node[pt] (o11) at ($(Obs)+(0,-1.3)$) {};
     \node[pt] (o12) at ($(Obs)+(0,-0.4)$) {};
     \node[pt] (o21) at ($(Obs)+(0, 0.5)$) {};
@@ -329,54 +332,56 @@ probabilistic factorization; locality; quantum foundations}
     {Observables identify\\equivalence classes.};
 
       \end{tikzpicture}
-      \caption{Schematic non-injective projection from the underlying configuration space
+      \caption{\hl{Schematic} %MDPI: Please confirm if overlapped contents matter for readability.
+ non-injective projection from the underlying configuration space
         $\Omega$ to the observable outcome space $O_A \times O_B$.
         Multiple underlying configurations correspond to the same observable pair $(a,b)$,
         defining equivalence classes.
         This many-to-one identification induces a generic failure of probabilistic factorization
         at the observable level without requiring nonlocal dynamics.}
       \label{fig:non-injective-projection}
-    \end{figure}
+    \end{figure} %EE: Attention AE: Please edit "information loss" to "Information loss".
 
-    Let $A$ and $B$ denote two spacelike separated measurement settings, with corresponding
+    Let $A$ and $B$ denote two spacelike separated measurement settings, with~corresponding
     observable outcomes $a \in \mathcal{O}_A$ and $b \in \mathcal{O}_B$.
     In standard local hidden-variable models, one assumes the existence of a variable
-    $\lambda$ such that the joint probability distribution factorizes as
-    \begin{equation}
+    $\lambda$ such that the joint probability distribution factorizes~as
+\begin{equation}
       P(a,b \mid A,B,\lambda) = P(a \mid A,\lambda)\,P(b \mid B,\lambda).
     \end{equation}
-    Bell inequalities follow from this factorization together with statistical independence
+    
+    \hl{Bell} %MDPI: We added indent of the paragraph. Please confirm. The following highlights are the same.
+ inequalities follow from this factorization together with statistical independence
     assumptions on $\lambda$.
 
     In the present framework, no such factorization is generically available.
-    Because the observable outcomes are obtained through the projection $\Pi$, the
-    probability distribution accessible at the effective level is given by
-    \begin{equation}
+    Because the observable outcomes are obtained through the projection $\Pi$, the    probability distribution accessible at the effective level is given by
+\begin{equation}
       P(a,b \mid A,B) =
       \sum_{\omega \in \Pi^{-1}(a,b)}
       \mu(\omega),
     \end{equation}
-    where $\mu$ is a probability measure on $\Omega$, and $\Pi^{-1}(a,b)$ denotes the
+    where $\mu$ is a probability measure on $\Omega$, and~$\Pi^{-1}(a,b)$ denotes the
     set of underlying configurations compatible with the joint observable outcome $(a,b)$.
 
-    When $\Pi$ is non-injective, the preimage $\Pi^{-1}(a,b)$ does not decompose into
+    When $\Pi$ is non-injective, the~preimage $\Pi^{-1}(a,b)$ does not decompose into
     independent subsets associated with $A$ and $B$.
     The same underlying configuration $\omega \in \Omega$ may therefore
     contribute simultaneously to the preimages of several observable
     outcome pairs, preventing the introduction of response functions
     $A(A,\omega)$ and $B(B,\omega)$ whose joint statistics reproduce
     $P(a,b\mid A,B)$ through a factorizable form.
-    As a result, the joint probability $P(a,b \mid A,B)$ does not admit a representation
+    As a result, the~joint probability $P(a,b \mid A,B)$ does not admit a representation
     as a product of marginal probabilities conditioned on any set of effective variables.
     The failure of factorization arises from the structure of the projection itself,
-    not from any dynamical interaction between the measurement regions.
+    not from any dynamical interaction between the measurement~regions.
 
     Importantly, locality at the underlying level is preserved.
     The measure $\mu(\omega)$ may be defined over configurations with strictly local
-    causal structure, and no superluminal influence or signal exchange is required.
+    causal structure, and~no superluminal influence or signal exchange is required.
     The violation of Bell inequalities therefore reflects a mismatch between the
     factorizable structure assumed in Bell-type derivations and the actual structure
-    of effective descriptions induced by non-injective mappings.
+    of effective descriptions induced by non-injective~mappings.
 
     This observation identifies non-injectivity as a sufficient condition for the
     failure of Bell factorization.
@@ -387,9 +392,9 @@ probabilistic factorization; locality; quantum foundations}
     from underlying configurations to observables is injective or admits an equivalent
     factorizable representation.
     When this condition fails, Bell-type correlations may arise without violating
-    local causality at the underlying level.
+    local causality at the underlying~level.
 
-    \paragraph{Remark on factorisability.}
+    \subsection{\highlighting{Remark on Factorisability}} %MDPI: We changed this into 2nd level section title and add section number before. Please confirm. The following highlights are the same.
       The formal proof that non-injectivity is sufficient to obstruct any
       factorisable representation is given in Appendix~\ref{app:factorization}.
       The logical chain rests entirely on the projection geometry.
@@ -401,17 +406,17 @@ probabilistic factorization; locality; quantum foundations}
       probability conditioned on $\lambda$ still sums over an entire fibre and generically
       fails to decompose into independent marginals.
       No refinement of $\lambda$ within the observable algebra can resolve this obstruction:
-      any such refinement leaves the fibre structure — and hence the impossibility of
-      factorisation — intact.
+      any such refinement leaves the fibre structure---and hence the impossibility of
+      factorisation---intact.
       No such $\lambda$ can therefore reproduce a factorisable representation.
       The failure of Bell factorisability is therefore a structural consequence of
       non-injectivity, independent of any assumption about the dynamics or the information
-      loss mechanism, as proved formally in Appendix~\ref{app:factorization}.
+      loss mechanism, as~proved formally in Appendix~\ref{app:factorization}.
 
-  \subsection*{Non-injectivity as a finite-capacity effect}
+  \subsection{\highlighting{Non-Injectivity as a Finite-Capacity Effect}}
 
   The non-injective character of the projection
-  $\Pi : \Omega \to \mathcal{O}$ should not be interpreted as an abstract or ad hoc assumption.
+  $\Pi : \Omega \to \mathcal{O}$ should not be interpreted as an abstract or ad~hoc assumption.
   It arises naturally when the effective description $\mathcal{O}$ has a finite
   capacity to encode distinctions present in the underlying configuration space $\Omega$.
 
@@ -421,13 +426,13 @@ probabilistic factorization; locality; quantum foundations}
   This loss is structural rather than epistemic: it reflects a limitation of the
   effective representation itself, not an incomplete specification of underlying variables.
   Such limitations are familiar in effective physical theories, where coarse-graining,
-  finite resolution, or renormalization procedures reduce the amount of accessible
+  finite resolution, or~renormalization procedures reduce the amount of accessible
   information and lead to emergent descriptions that do not retain full microscopic
   distinctions.
 
   The multiplicity of pre-images $\Pi^{-1}(o)$ for a given observable outcome
   $o \in \mathcal{O}$ naturally defines a structural entropy associated with the
-  projection,
+  projection
   \[
     S_{\Pi} \equiv -\sum_{o \in \mathcal{O}} \nu(o)\,\log \nu(o),
     \qquad
@@ -435,61 +440,61 @@ probabilistic factorization; locality; quantum foundations}
   \]
   where $\mu$ denotes the measure on $\Omega$ induced by the underlying dynamics.
   This \emph{projection entropy} quantifies the degree of non-injectivity of the
-  effective description and is independent of any notion of epistemic ignorance.
+  effective description and is independent of any notion of epistemic~ignorance.
 
-  From this perspective, the breakdown of probabilistic factorization can be understood
+  From this perspective, the~breakdown of probabilistic factorization can be understood
   as a consequence of operating in a regime where the effective capacity is not large
   compared to the set of accessible configurations.
   In such finite-capacity regimes, distinct underlying configurations necessarily
-  overlap at the level of observables, and factorization fails.
+  overlap at the level of observables, and~factorization~fails.
 
   Conversely, when the effective capacity is large compared to the occupied portion
-  of configuration space, the mapping becomes approximately injective and standard
-  factorizable descriptions are recovered.
+  of configuration space, the~mapping becomes approximately injective and standard
+  factorizable descriptions are~recovered.
 
   Violations of Bell-type inequalities thus correspond to the minimal regime in which
   finite-capacity effects become operationally observable.
   They can be interpreted as the weakest observable signature of a non-zero projection
-  entropy $S_{\Pi}$, without invoking nonlocal dynamics, retrocausal influences, or
-  hidden-variable completions.
+  entropy $S_{\Pi}$, without~invoking nonlocal dynamics, retrocausal influences, or  hidden-variable completions.
   This suggests that the magnitude of Bell-type violations may be quantitatively
   controlled by the projection entropy $S_{\Pi}$.
 
-  \paragraph{Structural versus arbitrary information loss.}
+ \subsection{\highlighting{Structural Versus Arbitrary Information Loss}}
     The information loss associated with non-injective projection is not arbitrary.
     It is entirely determined by the geometric structure of the fibres
     $\Pi^{-1}(o)$, which encode the finite projective capacity of the effective
     description.
-    As a consequence, the resulting ambiguity is not a source of randomness in the
-    usual sense, but a manifestation of structured equivalence classes in the underlying
+    As a consequence, the~resulting ambiguity is not a source of randomness in the
+    usual sense, but~a manifestation of structured equivalence classes in the underlying
     configuration space.
     The same fibre structure that prevents a factorised hidden-variable description also
     imposes global consistency constraints on admissible configurations.
     The observed correlations are therefore not accidental effects of information loss,
     but necessary consequences of this constrained geometry: they arise from the fact
-    that distinct underlying configurations, although indistinguishable at the observable
+    that distinct underlying configurations, although~indistinguishable at the observable
     level, remain jointly constrained within the same fibre structure.
-    In this sense, the apparent tension between the ``unpredictability'' of information
+    In this sense, the~apparent tension between the ``unpredictability'' of information
     loss and the ``controlled'' character of quantum correlations is resolved: both
-    are consequences of the same underlying fibre geometry.
+    are consequences of the same underlying fibre~geometry.
 
-  \subsection{Quantitative bounds from projection entropy}
+   \subsection{\highlighting{Quantitative} %MDPI: We renumbered the subsection numbers. Please confirm.
+   Bounds from Projection~Entropy}
   \label{subsec:projection-entropy-bound}
 
   The structural analysis developed above identifies non-injectivity as a sufficient
   condition for the failure of Bell factorizability.
   We now refine this result by proposing a minimal quantitative relation between
-  projection entropy and the strength of Bell--CHSH violations.
+  projection entropy and the strength of Bell--CHSH~violations.
 
   Let
-  \begin{equation}
+\begin{equation}
     S_{\Pi} \equiv - \sum_{o \in O} \nu(o)\,\log \nu(o),
   \end{equation}
   denote the projection entropy associated with the mapping $\Pi : \Omega \to O$,
   where $\nu(o) = \mu(\Pi^{-1}(o))$.
 
   We introduce a normalized projection entropy
-  \begin{equation}
+\begin{equation}
     \sigma \;\equiv\; \frac{S_{\Pi}}{S_{\Pi}^{\max}},
     \qquad 0 \le \sigma \le 1,
   \end{equation}
@@ -497,49 +502,50 @@ probabilistic factorization; locality; quantum foundations}
   structure.
 
   We propose that the CHSH parameter
-  \begin{equation}
+\begin{equation}
     S \equiv |E_{00} + E_{01} + E_{10} - E_{11}|
   \end{equation}
   is constrained by a monotonic function of $\sigma$ of the form
-  \begin{equation}
+\begin{equation}
     S(\sigma) \;\leq\; 2 + 2\,\Phi(\sigma),
     \label{eq:general-bound}
   \end{equation}
   where $\Phi(\sigma)$ satisfies
-  \begin{equation}
+\begin{equation}
     \Phi(0) = 0, \qquad \Phi(1) = 1.
   \end{equation}
-  This relation is phenomenological; its boundary conditions are exact
+  
+  \hl{This} relation is phenomenological; its boundary conditions are exact
   consequences of the framework, while the functional form of $\Phi$ for
-  intermediate $\sigma$ is not determined at the present level of analysis.
+  intermediate $\sigma$ is not determined at the present level of~analysis.
 
   This formulation interpolates between three regimes:
 
   \begin{itemize}
-    \item $\sigma = 0$: injective regime, $S = 2$ (classical bound),
-    \item $0 < \sigma < 1$: partial overlap, intermediate non-factorizable regime,
+    \item $\sigma = 0$: injective regime, $S = 2$ (classical bound);
+    \item $0 < \sigma < 1$: partial overlap, intermediate non-factorizable regime;
     \item $\sigma = 1$: maximal overlap, $S = 4$ (algebraic bound).
   \end{itemize}
 
   The two boundary conditions on $\Phi$ are exact consequences of the framework:
   the classical bound $S = 2$ is recovered when $\Pi$ is injective ($\sigma = 0$),
   and the algebraic bound $S = 4$ is attained when the projection is maximally
-  non-injective ($\sigma = 1$), as illustrated by the PR-box construction of
+  non-injective ($\sigma = 1$), as~illustrated by the PR-box construction of
   Appendix~\ref{app:toy-model}.
   The specific functional form of $\Phi(\sigma)$ for intermediate values is not
   determined at the present level of analysis and should be regarded as a
   phenomenological interpolation.
-  Additional structural constraints — in particular the admissibility conditions
+  Additional structural constraints---in particular the admissibility conditions
   that select the quantum correlation set within the space of non-factorisable models,
-  as developed in companion work~\cite{Q1} — are needed to fix $\Phi$ analytically.
+  as developed in companion work~\cite{Q1}---are needed to fix $\Phi$ analytically.
   operator-algebraic structure of quantum theory.
-  The mechanism it identifies — non-injective projection as the structural origin of
-  Bell-type factorisation failure — is independent of any quantum postulate and operates
+  The mechanism it identifies---non-injective projection as the structural origin of
+  Bell-type factorisation failure---is independent of any quantum postulate and operates
   at a more primitive descriptive level.
-  Accordingly, the toy model of Appendix~B does not reproduce the quantum correlation
+  Accordingly, the~toy model of Appendix~\ref{app:toy-model} does not reproduce the quantum correlation
   set exactly and may exceed the Tsirelson bound~\cite{Tsirelson1980}.
   Its role is solely to show that non-injective projection is a sufficient structural
-  condition for the failure of Bell-type factorisability.
+  condition for the failure of Bell-type~factorisability.
 
   The Tsirelson bound is not an additional assumption within the present programme.
   When the admissibility structure of the non-injective projection is taken into account,
@@ -554,43 +560,43 @@ probabilistic factorization; locality; quantum foundations}
   within the space of non-factorisable models~\cite{Brunner2014}.
 
   A minimal realization consistent with this constraint is obtained by requiring that
-  $\Phi(\sigma)$ saturates at an intermediate value $\sigma_q < 1$, such that
-  \begin{equation}
+  $\Phi(\sigma)$ saturates at an intermediate value $\sigma_q < 1$ such that
+\begin{equation}
     S(\sigma_q) = 2\sqrt{2}.
   \end{equation}
 
   This suggests that quantum correlations correspond to a constrained finite-capacity
   regime in which projection entropy is non-zero but does not reach its maximal value.
   The Tsirelson bound then appears as a structural limitation on admissible
-  non-injective projections rather than as a purely dynamical constraint.
+  non-injective projections rather than as a purely dynamical~constraint.
 
   The relation (\ref{eq:general-bound}) therefore provides a minimal quantitative bridge
-  between projection entropy and observable Bell violations, and defines a testable
+  between projection entropy and observable Bell violations, and~defines a testable
   prediction of the present framework: the strength of correlations is controlled by
   the degree of non-injectivity of the effective description.
   This relation reflects the loss of factorisable structure under
   projection-induced information compression: as $\sigma$ increases, more underlying
   distinctions are collapsed at the observable level, deepening the obstruction to any
-  factorised hidden-variable representation.
+  factorised hidden-variable~representation.
 
-  \section{Bell Inequalities Revisited: Structural vs Dynamical Assumptions}
+  \section{Bell Inequalities Revisited: Structural vs. Dynamical~Assumptions}
   \label{sec:abstract-math-model}
 
   Bell’s theorem is commonly presented as a no-go result for local realist theories.
   More precisely, it establishes that no model satisfying a specific set of probabilistic
   assumptions can reproduce all quantum correlations.
   It is therefore essential to distinguish carefully between the assumptions entering
-  the derivation of Bell inequalities and the physical principles they are often taken to represent.
+  the derivation of Bell inequalities and the physical principles they are often taken to~represent.
 
   The derivation of Bell inequalities relies on three key assumptions.
   First, outcome probabilities are assumed to be well-defined and conditioned on a
   complete specification of relevant variables.
   Second, joint probabilities are assumed to factorize for spacelike separated
   measurements, reflecting the absence of direct causal influence between distant measurement settings.
-  Third, the conditioning variables are assumed to be statistically independent of the measurement choices.
-  Violations of Bell inequalities imply that at least one of these assumptions fails.
+  Third, the~conditioning variables are assumed to be statistically independent of the measurement choices.
+  Violations of Bell inequalities imply that at least one of these assumptions~fails.
 
-  In many discussions, the failure of Bell inequalities is interpreted as evidence for a breakdown of
+  In many discussions, the~failure of Bell inequalities is interpreted as evidence for a breakdown of
   locality~\cite{Bell1964}.
   However, locality in Bell’s sense is a condition on the factorization of effective
   probabilities, not a direct statement about the causal structure of the underlying
@@ -600,32 +606,31 @@ probabilistic factorization; locality; quantum foundations}
   those outcomes.
   They do not directly constrain the existence or absence of superluminal interactions.
   They instead constrain the class of effective descriptions in which observable outcomes
-  can be represented as independently specifiable local variables.
+  can be represented as independently specifiable local~variables.
 
-  Within the framework considered here, the failure of Bell inequalities originates
+  Within the framework considered here, the~failure of Bell inequalities originates
   from the breakdown of effective factorization.
   As shown in the previous section, non-injective mappings between underlying
   configurations and observable outcomes generically arise when the effective
   description has a finite capacity to encode underlying distinctions.
   In such regimes, no complete set of outcome-defining variables exists at the
   observable level.
-  Although the underlying description may be local and deterministic, the observable
-  description does not admit a factorized probabilistic representation.
+  Although the underlying description may be local and deterministic, the~observable
+  description does not admit a factorized probabilistic~representation.
 
   Such non-injective projections need not be regarded as purely abstract constructions.
   They may arise when the effective observable space is obtained by projecting a
   higher-dimensional configuration space onto a lower-dimensional description.
-  Geometric realizations, for instance based on fibered structures such as Hopf-type
+  Geometric realizations, for~instance based on fibered structures such as Hopf-type
   projections, provide concrete examples in which loss of injectivity is controlled
-  by structural invariants associated with the projection.
+  by structural invariants associated with the~projection.
 
   This distinction clarifies the sense in which Bell’s theorem applies.
   Bell inequalities are valid only for effective descriptions in which observable
   outcomes can be parameterized by a set of variables that renders the projection from
-  underlying configurations injective, or at least approximately injective, and
-  therefore factorizable.
-  When this condition is not met, the assumptions required for the derivation of Bell
-  inequalities are violated independently of any consideration of causal nonlocality.
+  underlying configurations injective, or~at least approximately injective, and therefore factorizable.
+  When this condition is not met, the~assumptions required for the derivation of Bell
+  inequalities are violated independently of any consideration of causal~nonlocality.
 
   From this perspective, violations of Bell inequalities do not compel the introduction
   of nonlocal dynamics or retrocausal mechanisms.
@@ -633,16 +638,16 @@ probabilistic factorization; locality; quantum foundations}
   observable outcomes are treated as independently specifiable local properties.
   Nonlocal correlations arise because joint outcomes must be globally consistent with a
   single non-factorizable effective description, not because information propagates
-  between distant regions.
+  between distant~regions.
 
   The present analysis therefore reframes Bell’s theorem as a constraint on a class of
   descriptive models rather than as a direct statement about the ontology or dynamics of physical reality.
   Bell inequalities test the compatibility of observed correlations with injective and
   factorizable effective descriptions.
   When non-injective projections are involved, especially in finite-capacity regimes,
-  Bell-type correlations may arise while preserving locality at the underlying level.
+  Bell-type correlations may arise while preserving locality at the underlying~level.
 
-  \section{Measurement, Decoherence, and the Emergence of Classicality}
+  \section{Measurement, Decoherence, and~the Emergence of~Classicality}
   \label{sec:classical-limit}
 
   The structural origin of Bell-type correlations identified above naturally raises
@@ -650,15 +655,15 @@ probabilistic factorization; locality; quantum foundations}
   Everyday physical systems exhibit effectively local and statistically independent
   behavior, despite being ultimately composed of quantum constituents.
   Any satisfactory account of Bell violations must therefore explain not only their
-  existence, but also their suppression in the classical limit.
+  existence but~also their suppression in the classical~limit.
 
   Within the present framework, this transition is understood as a change in the
   effective properties of the projection from underlying configurations to observable
   descriptions.
-  While the projection is generally non-injective at microscopic scales, the effective
+  While the projection is generally non-injective at microscopic scales, the~effective
   descriptive capacity associated with observable states becomes large compared to the
   set of configurations that are actually explored.
-  In this regime, the mapping becomes approximately injective.
+  In this regime, the~mapping becomes approximately~injective.
 
   Decoherence plays an important but secondary role in this process.
   Through continuous interaction with uncontrolled environmental degrees of freedom,
@@ -667,24 +672,24 @@ probabilistic factorization; locality; quantum foundations}
   This evolution effectively reduces the overlap between distinct underlying
   configurations contributing to the same observable outcome, thereby pushing the
   system toward a regime in which the projection behaves as approximately one-to-one~\cite{Zurek2003}.
-  In this regime, the multiplicity of pre-images associated with each observable outcome
-  becomes negligible, and the projection entropy effectively vanishes.
+  In this regime, the~multiplicity of pre-images associated with each observable outcome
+  becomes negligible, and~the projection entropy effectively~vanishes.
 
   From the perspective of observable descriptions, this corresponds to a regime in
   which the effective capacity of the description exceeds the occupied portion of
   configuration space.
   Global consistency constraints associated with non-injective projections become
-  negligible, and observable outcomes can be treated as effectively independent.
+  negligible, and~observable outcomes can be treated as effectively~independent.
 
   In this regime, joint probabilities admit an approximate decomposition of the form
-  \begin{equation}
+\begin{equation}
     P(a,b \mid A,B) \approx P(a \mid A)\,P(b \mid B),
   \end{equation}
   up to corrections that are exponentially small in the strength of environmental
   coupling or the degree of coarse-graining.
   Bell inequalities are therefore not violated in practice, not because the underlying
-  structure has changed, but because the effective description operates in an
-  approximately injective regime.
+  structure has changed, but~because the effective description operates in an
+  approximately injective~regime.
 
   Importantly, this recovery of classical behavior does not require the introduction
   of additional collapse postulates or modifications of quantum dynamics.
@@ -695,85 +700,85 @@ probabilistic factorization; locality; quantum foundations}
   approximately complete specification, rendering joint probabilities effectively
   factorizable.
 
-  From this viewpoint, the quantum-to-classical transition reflects a change in
+  From this viewpoint, the~quantum-to-classical transition reflects a change in
   descriptive accessibility rather than a change in fundamental physical laws.
   Bell-type correlations are suppressed when finite-capacity effects become negligible
   in the relevant regime.
   The classical world emerges as a limit in which effective injectivity is restored,
-  and with it, the validity of classical notions of separability and locality.
+  and with it, the~validity of classical notions of separability and~locality.
 
-  \section{Discussion and Conceptual Positioning}
+  \section{Discussion and Conceptual~Positioning}
   \label{sec:discussion}
 
-  The analysis presented in this work proposes a structural reinterpretation of Bell
+  \textls[-5]{The analysis presented in this work proposes a structural reinterpretation of Bell
   inequality violations that avoids introducing nonlocal dynamics, hidden variables,
   or modifications of quantum mechanics.
   It is therefore important to clarify how this approach relates to existing
-  interpretations and foundational proposals addressing quantum nonlocality.
+  interpretations and foundational proposals addressing quantum~nonlocality.}
 
-  Unlike local hidden-variable models, the present framework does not assume the
+  Unlike local hidden-variable models, the~present framework does not assume the
   existence of a set of accessible variables that fully determine observable outcomes~\cite{tHooft2016CAI}.
-  No completion of the quantum state is postulated, and no additional degrees of
+  No completion of the quantum state is postulated, and~no additional degrees of
   freedom are introduced.
   The failure of Bell inequalities arises not from incomplete knowledge of underlying
-  variables, but from the non-injective nature of the mapping between underlying
-  configurations and observable descriptions.
+  variables, but~from the non-injective nature of the mapping between underlying
+  configurations and observable~descriptions.
 
   The present approach is also distinct from superdeterministic models~\cite{Hall2010LocalDeterministic}.
   While superdeterminism denies statistical independence between measurement settings
   and underlying variables, no such assumption is required here.
   Measurement choices remain free and uncorrelated with the underlying configuration space.
   Bell violations arise solely from the structural properties of effective descriptions,
-  not from conspiratorial correlations between settings and states.
+  not from conspiratorial correlations between settings and~states.
 
   Retrocausal interpretations similarly invoke influences propagating backward in time
   to account for nonlocal correlations.
-  By contrast, the mechanism discussed here is entirely atemporal at the descriptive
+  By contrast, the~mechanism discussed here is entirely atemporal at the descriptive
   level.
   No causal influence, forward or backward, is required between distant measurement
   events.
   Correlations emerge from the global consistency constraints imposed by non-factorizable
-  effective descriptions, rather than from dynamical signaling.
+  effective descriptions, rather than from dynamical~signaling.
 
   The present framework is compatible with standard accounts of quantum
-  contextuality~\cite{KochenSpecker1967}, but shifts the emphasis from contextual measurement
+  contextuality~\cite{KochenSpecker1967}, but~shifts the emphasis from contextual measurement
   dependence to descriptive non-injectivity.
   Rather than attributing Bell violations to context-dependent properties of observables,
   we identify a more general structural origin: the impossibility of assigning
   independent local outcomes within a single effective description when the underlying
-  mapping is many-to-one.
+  mapping is~many-to-one.
 
   Finally, we stress that the present work does not advocate a specific ontological
   interpretation of quantum mechanics.
-  It neither endorses nor rejects realism, operationalism, or informational approaches.
+  It neither endorses nor rejects realism, operationalism, or~informational approaches.
   Our aim is more modest: to isolate a minimal and sufficient structural condition under
   which Bell-type inequalities fail.
   This condition is independent of any particular ontological commitment and applies
   to any framework in which observable descriptions arise through non-injective mappings.
   Non-injective projection, understood as a finite-capacity effect, provides such a
   condition, clarifying how quantum correlations can arise without abandoning locality
-  at the underlying level.
+  at the underlying~level.
 
   In physical realizations, this non-injectivity can be understood as a consequence
   of finite descriptive capacity.
   In particular, Planck's constant $h$ sets a fundamental bound on the
   distinguishability of underlying configurations, thereby controlling the effective
-  size of the equivalence classes $[\omega]$ that define observable outcomes.
+  size of the equivalence classes $[\omega]$ that define observable~outcomes.
 
   In this sense, Bell inequality violations may be viewed not as evidence for exotic
-  dynamics, but as indicators of intrinsic limitations of finite-capacity effective
+  dynamics, but~as indicators of intrinsic limitations of finite-capacity effective
   descriptions~\cite{Spekkens2007Epistemic}.
   They reveal the boundaries of applicability of classical probabilistic reasoning,
-  rather than the presence of nonlocal causal mechanisms.
+  rather than the presence of nonlocal causal~mechanisms.
 
-  \subsection{Relation to local hidden-variable models}
+  \subsection{Relation to Local Hidden-Variable~Models}
     \label{subsec:lhv-relation}
 
     Violations of Bell inequalities are commonly interpreted as ruling out local
     hidden-variable models.
     More precisely, Bell’s theorem constrains a class of effective descriptions in which
     measurement outcomes are assumed to be determined by a set of underlying variables
-    that renders joint probabilities factorizable for spacelike separated measurements.
+    that renders joint probabilities factorizable for spacelike separated~measurements.
 
     The analysis presented here clarifies that Bell inequalities do not directly constrain
     underlying physical dynamics.
@@ -781,9 +786,9 @@ probabilistic factorization; locality; quantum foundations}
     When observable outcomes admit an injective or effectively factorizable representation
     in terms of underlying variables, Bell-type inequalities apply.
     When this condition fails, Bell-type correlations may arise even if the underlying
-    description is local, deterministic, and causally well behaved.
+    description is local, deterministic, and~causally well~behaved.
 
-    Within the framework considered here, the failure of Bell inequalities originates
+    Within the framework considered here, the~failure of Bell inequalities originates
     from the non-injective nature of the mapping between underlying configurations and
     observable outcomes.
     Such non-injectivity arises generically when the effective description has a finite
@@ -793,25 +798,24 @@ probabilistic factorization; locality; quantum foundations}
     that would allow joint probabilities to be decomposed into independent local
     contributions.
 
-    Bell inequalities are therefore violated not because of nonlocal dynamics, but
-    because the assumptions required for probabilistic factorization are not satisfied
-    in finite-capacity effective descriptions.
+    Bell inequalities are therefore violated not because of nonlocal dynamics, but because the assumptions required for probabilistic factorization are not satisfied
+    in finite-capacity effective~descriptions.
 
-  \subsection{Non-injective projection versus superdeterminism and free choice}
+  \subsection{Non-Injective Projection Versus Superdeterminism and Free~Choice}
     \label{subsec:free-choice}
 
     A frequent objection to any violation of statistical independence in Bell-type analyses
-    is that it implicitly relies on superdeterministic assumptions, namely correlations
+    is that it implicitly relies on superdeterministic assumptions, namely, correlations
     between measurement settings and underlying physical states.
-    In such scenarios, the apparent violation of Bell inequalities is attributed to a
-    conspiratorial coordination between experimental choices and microscopic conditions.
+    In such scenarios, the~apparent violation of Bell inequalities is attributed to a
+    conspiratorial coordination between experimental choices and microscopic~conditions.
 
     The mechanism discussed here is fundamentally different.
     No correlation is postulated between measurement settings and underlying
-    configurations, and no restriction is imposed on the freedom of experimental choices
+    configurations, and~no restriction is imposed on the freedom of experimental choices
     at the level of observable descriptions.
     Measurement settings are assumed to be freely and independently chosen within the
-    effective description, in full accordance with standard experimental practice.
+    effective description, in~full accordance with standard experimental~practice.
 
     The loss of statistical independence arises instead from the non-injective structure
     of the mapping from underlying configurations to observable outcomes.
@@ -820,14 +824,14 @@ probabilistic factorization; locality; quantum foundations}
     Because distinct underlying configurations are identified at the effective level,
     conditioning on observable variables does not isolate independent subsystems.
     The resulting failure of probabilistic factorization is therefore structural and
-    geometric in origin, rather than causal or conspiratorial.
+    geometric in origin, rather than causal or~conspiratorial.
 
-    In this sense, the present framework preserves operational free choice while violating
+    In this sense, the~present framework preserves operational free choice while violating
     the assumptions required for Bell-type factorizations.
     The breakdown of statistical independence reflects intrinsic limitations of
-    finite-capacity effective descriptions, not a fine-tuned coordination of initial conditions.
+    finite-capacity effective descriptions, not a fine-tuned coordination of initial~conditions.
 
-  \subsection{Measurement, contextuality, and effective descriptions}
+  \subsection{Measurement, Contextuality, and~Effective~Descriptions}
     \label{subsec:contextuality}
 
     Recent work in quantum foundations has emphasized that nonlocal and contextual
@@ -837,51 +841,51 @@ probabilistic factorization; locality; quantum foundations}
     as coarse-grained descriptions of an underlying ontic state space~\cite{Spekkens2007}.
     These approaches identify contextuality as a fundamental feature of quantum theory,
     reflecting the impossibility of assigning outcome values independently of the
-    measurement context.
+    measurement~context.
 
-    The mechanism discussed here is complementary in spirit, but identifies a more
+    The mechanism discussed here is complementary in spirit, but~identifies a more
     primitive structural origin for the failure of Bell factorizability.
     In this framework, contextuality is not taken as a primitive property of the
-    probabilistic model, but arises as a structural consequence of the non-injectivity
-    of $\Pi$, without excluding other possible mechanisms in different settings.
+    probabilistic model, but~arises as a structural consequence of the non-injectivity
+    of $\Pi$, without~excluding other possible mechanisms in different settings.
     Rather than attributing contextuality to context-dependent properties of observables,
     we trace it to the non-injective mapping between underlying configurations and
     observable descriptions.
     When the effective description has a finite capacity to encode distinctions present
-    at the underlying level, distinct configurations are necessarily identified, and no
-    globally consistent assignment of independent local outcomes is possible.
+    at the underlying level, distinct configurations are necessarily identified, and~no
+    globally consistent assignment of independent local outcomes is~possible.
 
     From this perspective, contextuality appears as a manifestation of descriptive
     non-injectivity.
-    In particular, the impossibility of assigning non-contextual value assignments
+    In particular, the~impossibility of assigning non-contextual value assignments
     can be traced to the fact that observable variables do not separate equivalence classes
     of underlying configurations.
     The impossibility of constructing non-contextual models reflects the fact that
     observable variables do not provide a complete specification of the underlying
     configuration.
     Bell-type correlations and contextuality therefore share a common structural origin
-    in the finite-capacity nature of effective descriptions.
+    in the finite-capacity nature of effective~descriptions.
 
     In regimes where the effective descriptive capacity is large compared to the
-    explored configuration space, the mapping becomes approximately injective.
-    In this limit, contextuality effects are suppressed, and observable outcomes may be
+    explored configuration space, the~mapping becomes approximately injective.
+    In this limit, contextuality effects are suppressed, and~observable outcomes may be
     treated as effectively independent.
     Classical statistical behavior thus emerges as a regime of approximate injectivity,
-    rather than as a fundamentally distinct domain.
+    rather than as a fundamentally distinct~domain.
 
     The present work does not propose a modification of quantum mechanics or a new
     ontological framework.
     Its contribution is to isolate a minimal and sufficient structural condition for the
     failure of Bell inequalities and the emergence of contextual correlations.
     Non-injective projection, understood as a finite-capacity effect, provides such a
-    condition while preserving both operational locality and empirical adequacy.
+    condition while preserving both operational locality and empirical~adequacy.
 
     We conclude that Bell inequality violations and contextuality need not be interpreted
-    as evidence for fundamental nonlocality, but may instead reflect intrinsic limitations
+    as evidence for fundamental nonlocality, but~may instead reflect intrinsic limitations
     of finite-capacity effective descriptions in which observable outcomes are treated as
-    independently specifiable local properties.
+    independently specifiable local~properties.
 
-  \subsection{Relation to the contextuality literature}
+  \subsection{Relation to the Contextuality~Literature}
     \label{subsec:contextuality-literature}
 
     A substantial body of work has examined Bell-inequality violations within
@@ -892,51 +896,51 @@ probabilistic factorization; locality; quantum foundations}
     decision making~\cite{Sulis2025}.
     Abramsky and Brandenburger~\cite{AbramskyBrandenburger2011} have characterised
     contextuality as an obstruction to globally consistent probability models in sheaf-theoretic
-    terms, and Amaral and Cunha~\cite{Amaral2018} have analysed the graph-theoretic
+    terms, and~Amaral and Cunha~\cite{Amaral2018} have analysed the graph-theoretic
     structure of contextuality scenarios.
     Khrennikov and collaborators have explored probabilistic models of Bell violations
     beyond quantum mechanics~\cite{Haven2014}.
-    Sulis has shown that the violation of a Bell-type inequality — more precisely a
-    Dzhafarov inequality for a four-cycle scenario — requires that at least one joint
+    Sulis has shown that the violation of a Bell-type inequality---more precisely a
+    Dzhafarov inequality for a four-cycle scenario---requires that at least one joint
     probability be non-factorisable~\cite{Sulis2025}: non-factorisability is therefore
-    a necessary condition for violation.
+    a necessary condition for~violation.
 
-    The present work complements this literature by identifying a \emph{sufficient}
+    The present work complements this literature by identifying a \emph{\hl{sufficient}}
     structural condition for non-factorisability.
     The key distinction is the following.
     In contextuality-based approaches, non-factorisability is a feature of the
     probabilistic model and may be introduced for any system that admits a contextual
-    description, whether quantum, classical, or outside of physics entirely.
+    description, whether quantum, classical, or~outside of physics entirely.
     Here, non-factorisability is instead derived as a consequence of a structural
     constraint on the effective description: the non-injective character of the projection
     $\Pi : \Omega \to \mathcal{O}$ from an underlying configuration space to the observable
     space.
-    This projection is not postulated as a modelling device, but arises naturally in
+    This projection is not postulated as a modelling device, but~arises naturally in
     physical frameworks where observable descriptions emerge from a higher-dimensional
     relational configuration space admitting a non-injective projection
     onto observable descriptions~\cite{Beau2026a}.
 
-    As a consequence, the present approach has a different explanatory direction.
-    Contextuality-based results establish \emph{when} factorisability fails.
-    The present result establishes \emph{why}: the fibre geometry of the effective
+    As a consequence, the~present approach has a different explanatory direction.
+    Contextuality-based results establish \emph{\hl{when}} factorisability fails.
+    The present result establishes \emph{\hl{why}}: the fibre geometry of the effective
     description makes a factorised hidden-variable representation impossible.
-    In this sense, the non-injective projection mechanism provides a structural
+    In this sense, the~non-injective projection mechanism provides a structural
     underpinning for the contextuality phenomena identified in the probabilistic
-    literature, rather than a competing account.
+    literature, rather than a competing~account.
 
     Finally, we note that Bell-type inequality violations are not exclusive to quantum
     systems and arise in classical contextual settings including decision
     making~\cite{Sulis2025} and social science~\cite{Haven2014}.
     The present mechanism applies equally in principle to any system whose effective
     description arises through a non-injective projection.
-    However, the companion programme~\cite{Q1} shows that when the admissibility
-    constraints of the physical framework are imposed, the mechanism selects specifically
-    quantum-mechanical structures — the singlet correlator, the Born rule, and the
-    Tsirelson bound — without additional postulates.
+    However, the~companion programme~\cite{Q1} shows that when the admissibility
+    constraints of the physical framework are imposed, the~mechanism selects specifically
+    quantum-mechanical structures---the singlet correlator, the~Born rule, and~the
+    Tsirelson bound---without additional postulates.
     This distinguishes the physical realisation from the broader class of contextual
-    probabilistic models.
+    probabilistic~models.
 
-  \subsection{Relation to quantum operator frameworks}
+  \subsection{Relation to Quantum Operator~Frameworks}
     \label{subsec:operator}
 
     The analysis developed in this paper is formulated in a measure-theoretic language,
@@ -944,16 +948,16 @@ probabilistic factorization; locality; quantum foundations}
     space to an effective observable description.
     This choice is deliberate: the aim is to isolate the minimal structural mechanism
     responsible for the failure of Bell-type factorisation, independently of any prior
-    quantum postulate.
+    quantum~postulate.
 
-    However, the same structural content admits a natural translation into the standard
+    However, the~same structural content admits a natural translation into the standard
     operator framework of quantum theory~\cite{NielsenChuang2000}.
-    In that language, the relevant object is not an ordinary set-theoretic projection, but a
+    In that language, the~relevant object is not an ordinary set-theoretic projection, but~a
     conditional expectation from a larger noncommutative algebra of descriptions to a
     reduced observable algebra~\cite{AccardiCecchini1982}.
     More precisely, one may view the passage from the full description to the effective one
     as a map
-    \begin{equation}
+\begin{equation}
       \mathcal{E} : \mathcal{A} \to \mathcal{B},
       \qquad \mathcal{B} \subset \mathcal{A},
     \end{equation}
@@ -961,14 +965,14 @@ probabilistic factorization; locality; quantum foundations}
     of accessible observables.
     In the sense of noncommutative probability~\cite{AccardiCecchini1982}, $\mathcal{E}$
     plays the role of a conditional expectation: it preserves the effective observable content
-    while discarding distinctions that are not representable at the reduced level.
+    while discarding distinctions that are not representable at the reduced~level.
 
-    From this perspective, the non-injectivity of $\Pi$ corresponds structurally to the fact
+    From this perspective, the~non-injectivity of $\Pi$ corresponds structurally to the fact
     that the reduction $\mathcal{E}$ has a non-trivial kernel.
     Distinct elements of the larger descriptive algebra become indistinguishable after
     restriction to the effective algebra.
     The resulting loss of distinguishability is the operator-theoretic analogue of the
-    equivalence classes $\Pi^{-1}(o)$ appearing in the classical presentation.
+    equivalence classes $\Pi^{-1}(o)$ appearing in the classical~presentation.
 
     This translation clarifies the relation between the present framework and standard
     quantum information theory~\cite{NielsenChuang2000}.
@@ -977,59 +981,59 @@ probabilistic factorization; locality; quantum foundations}
     Rather, it provides the operator-language counterpart of the same structural fact:
     effective descriptions retain only a subalgebra of the distinctions available in the
     underlying description.
-    In this sense, the present non-injective projection picture is compatible with the
+    In this sense, the~present non-injective projection picture is compatible with the
     noncommutative framework of conditional expectations and with the general logic of
     information-degrading quantum channels~\cite{Brunner2014}, while remaining more
-    primitive than either.
+    primitive than~either.
 
-    The projection entropy $S_\Pi$ introduced in Section~2 is likewise not identical to a
-    von Neumann conditional entropy, but plays an analogous structural role.
+    The projection entropy $S_\Pi$ introduced in Section~\ref{sec:non-injective-projection} is likewise not identical to a
+    von Neumann conditional entropy, but~plays an analogous structural role.
     Both quantities measure the loss of distinguishability induced by passage to a reduced
     description~\cite{NielsenChuang2000}.
     Accordingly, $S_\Pi$ may be regarded as the commutative analogue of the entropy loss
-    associated with restriction to an observable subalgebra.
+    associated with restriction to an observable~subalgebra.
 
     This operator reformulation does not alter the main claim of the paper.
     The failure of Bell factorisation still originates from the fact that the effective
     description does not preserve the full distinguishability structure of the underlying one.
     What changes is only the language: the many-to-one projection $\Pi : \Omega \to \mathcal{O}$
-    becomes, in the quantum operator setting, a noncommutative conditional expectation onto
-    an accessible observable algebra.
+    becomes, in~the quantum operator setting, a~noncommutative conditional expectation onto
+    an accessible observable~algebra.
 
-  \section{Conclusion}
+  \section{Conclusions}
   \label{sec:conclusion}
 
   In conclusion, we have shown that violations of Bell inequalities do not require
-  dynamical nonlocality, nor the abandonment of realism, but can instead be understood
+  dynamical nonlocality, nor the abandonment of realism, but~can instead be understood
   as a generic consequence of non-injective projection in finite-capacity effective
   descriptions.
   Within this framework, Bell-type correlations arise not from superluminal influences
-  or hidden causal mechanisms, but from structural features of observable descriptions
-  in which multiple underlying configurations correspond to the same outcomes.
+  or hidden causal mechanisms, but~from structural features of observable descriptions
+  in which multiple underlying configurations correspond to the same~outcomes.
 
   This analysis is purely structural and does not rely on any modification of quantum
   dynamics or on the introduction of additional hidden variables.
   The failure of Bell-type factorizability is traced to the descriptive level itself,
   and reflects the impossibility of assigning independent local outcomes within a
-  single effective representation when the underlying mapping is non-injective.
+  single effective representation when the underlying mapping is~non-injective.
 
   This perspective is naturally embedded in relational approaches in which spacetime
-  and observables are not taken as fundamental, but emerge as effective descriptions
+  and observables are not taken as fundamental, but~emerge as effective descriptions
   from an underlying configuration space.
-  In particular, the non-injective projection considered here arises generically in
+  In particular, the~non-injective projection considered here arises generically in
   relational and spectral frameworks where spacetime geometry itself is reconstructed
   from more primitive relational structures~\cite{Beau2026a}.
   Concrete realizations may involve configuration spaces with non-trivial fiber
   structure, such as Hopf-type projections from $S^3$ onto effective observable
   spaces, where the loss of injectivity is controlled by geometric invariants of
-  the projection.
+  the~projection.
 
   Quantum correlations then cease to appear as instances of mysterious ``action at a
   distance'' and instead reflect global consistency constraints imposed by the
   non-injective mapping between underlying configurations and the domain of localized
   measurements.
 
-  From this viewpoint, the empirical success of relativistic locality and quantum
+  From this viewpoint, the~empirical success of relativistic locality and quantum
   statistics is preserved at the effective level, while their apparent tension is resolved
   by recognizing the intrinsic limitations of finite-capacity effective descriptions.
   Classical locality and probabilistic independence emerge as limiting cases in which
@@ -1039,39 +1043,58 @@ probabilistic factorization; locality; quantum foundations}
   descriptions rather than as a modification of underlying physical laws.
   Bell-type correlations may therefore be interpreted as the minimal observable
   signature of a non-zero projection entropy $S_{\Pi}$ associated with the
-  non-injective character of the effective description.
+  non-injective character of the effective~description.
+\vspace{6pt}
 
-  \appendix
-  \clearpage
+\funding{\hl{This research received no external funding.}} %MDPI: Please confirm if this statement is correct.
 
-  \section*{Appendices}
-  \appendix
+\dataavailability{\hl{No new data were created or analyzed in this study. Data sharing is not applicable to this article.}} %MDPI: Please confirm if this statement is correct.
 
-  \section{Formal Conditions for the Failure of Probabilistic Factorization}
+    \acknowledgments{\hl{The author} %MDPI: Please ensure that all individuals included in this section have consented to the acknowledgement.
+ acknowledges the use of large language models as a
+    supportive tool for refining language, structure, and~internal consistency
+    during the development of this manuscript. All conceptual contributions,
+      theoretical choices, and~interpretations remain the sole responsibility of the~author.}
+
+    \conflictsofinterest{The author declares no conflicts of interest.}
+
+
+%  \appendix
+%  \clearpage
+
+%  \section*{Appendices}
+%  \appendix
+
+\appendixtitles{yes} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+
+
+\section[\appendixname~\thesection]{Formal Conditions for the Failure of Probabilistic~Factorization}
   \label{app:factorization}
 
-  This appendix provides a formal clarification of the structural conditions under
+  This Appendix provides a formal clarification of the structural conditions under
   which probabilistic factorization fails in the presence of non-injective projections.
-  The purpose is not to introduce new physical assumptions, but to make explicit the
-  logical content underlying the arguments presented in the main text.
+  The purpose is not to introduce new physical assumptions, but~to make explicit the
+  logical content underlying the arguments presented in the main~text.
 
   Let $(\Omega,\Sigma,\mu)$ be a probability space describing underlying configurations
   $\omega \in \Omega$, equipped with a normalized measure $\mu$.
-  Observable outcomes are obtained through a measurable mapping
-  \begin{equation}
+  Observable outcomes are obtained through a measurable \hl{mapping} %MDPI: Figures, tables, and equations in the Appendix should be marked as “Figure A1, Table A1, Equation (A1)”, etc. We have corrected all equation numbers. Please confirm these revisions.
+\begin{equation}
     \Pi : \Omega \rightarrow \mathcal{O},
   \end{equation}
   where $\mathcal{O}$ denotes the space of observable descriptions.
-  We assume that $\Pi$ is non-injective, so that there exist distinct
+  We assume that $\Pi$ is non-injective so that there exist distinct
   $\omega_1 \neq \omega_2$ such that $\Pi(\omega_1)=\Pi(\omega_2)$.
   Such non-injectivity arises generically when the effective description $\mathcal{O}$
   has a finite capacity to encode distinctions present in $\Omega$.
 
-  Let $A$ and $B$ denote two spacelike separated measurement settings, and let
+  Let $A$ and $B$ denote two spacelike separated measurement settings, and~let
   $a \in \mathcal{O}_A$ and $b \in \mathcal{O}_B$ denote the corresponding observable
   outcomes.
   The joint probability distribution accessible at the effective level is given by
-  \begin{equation}
+\begin{equation}
     P(a,b \mid A,B)
     =
     \mu\!\left(\Pi^{-1}(a,b)\right)
@@ -1082,7 +1105,7 @@ probabilistic factorization; locality; quantum foundations}
   Suppose that a factorizable representation of the joint distribution exists.
   Then there must exist a measurable variable $\lambda$ and a probability density
   $\rho(\lambda)$ such that
-  \begin{equation}
+\begin{equation}
     P(a,b \mid A,B)
     =
     \int d\lambda\,
@@ -1091,77 +1114,78 @@ probabilistic factorization; locality; quantum foundations}
     P(b \mid B,\lambda).
     \label{eq:bell-factorization}
   \end{equation}
-  This representation implicitly assumes that $\lambda$ provides a complete and
+  
+  \hl{This} representation implicitly assumes that $\lambda$ provides a complete and
   non-redundant parameterization of the relevant underlying configurations for the
-  observable outcomes.
+  observable~outcomes.
 
   However, when $\Pi$ is non-injective, no such variable $\lambda$ can generically
   exist at the effective level.
   Any candidate $\lambda$ constructed from observable data must identify entire
   equivalence classes
-  \begin{equation}
+\begin{equation}
     [\omega] = \{\omega' \in \Omega \mid \Pi(\omega')=\Pi(\omega)\},
   \end{equation}
   rather than individual underlying configurations.
   As a result, conditioning on $\lambda$ does not isolate independent contributions
   associated with $A$ and $B$.
 
-  More formally, if $\lambda$ is a measurable function of $\Pi(\omega)$, then $\lambda$
+  More formally, if~$\lambda$ is a measurable function of $\Pi(\omega)$, then $\lambda$
   is constant over each equivalence class $[\omega]$.
   The joint probability conditioned on $\lambda$ therefore takes the form
-  \begin{equation}
+\begin{equation}
     P(a,b \mid A,B,\lambda)
     =
     \sum_{\omega \in [\omega_\lambda]} \mu(\omega \mid \lambda),
   \end{equation}
   which does not decompose into a product of independent marginal terms unless
   additional constraints are imposed that effectively restore injectivity.
-  In generic finite-capacity regimes, such constraints are absent, and factorization fails.
+  In generic finite-capacity regimes, such constraints are absent, and~factorization~fails.
 
   This establishes that non-injectivity of the mapping from underlying configurations
   to observable descriptions is sufficient to obstruct any representation of the form
-  Eq.~\eqref{eq:bell-factorization}.
-  Non-injectivity is therefore a sufficient, but not necessary, condition for the
+  \mbox{Equation~\eqref{eq:bell-factorization}}.
+  Non-injectivity is therefore a sufficient, but~not necessary, condition for the
   failure of probabilistic factorization.
   The failure of Bell-type factorization thus follows from a purely structural property
   of the descriptive mapping, independently of any assumptions about dynamical
-  nonlocality, retrocausality, or hidden variables.
+  nonlocality, retrocausality, or~hidden~variables.
 
   The result emphasizes that Bell inequalities apply only to effective descriptions
   admitting an injective or equivalently factorizable representation.
   When observable outcomes arise through non-injective projections, violations of Bell
-  inequalities are a natural and generic consequence of finite-capacity effective descriptions.
+  inequalities are a natural and generic consequence of finite-capacity effective~descriptions.
 
-  \section{A Toy Model Illustrating Non-Injective Projection}
+  \section[\appendixname~\thesection]{A Toy Model Illustrating Non-Injective~Projection}
   \label{app:toy-model}
 
   We present a simple toy model intended to illustrate how Bell-type correlations may
   arise from non-injective projection without invoking nonlocal dynamics, hidden
-  variables, or superdeterministic assumptions.
+  variables, or~superdeterministic assumptions.
   The model is deliberately minimal and does not aim to reproduce the full structure of quantum theory.
   Its purpose is solely to make explicit the logical mechanism underlying the failure
-  of probabilistic factorization.
+  of probabilistic~factorization.
 
-  In particular, the model illustrates how such non-injectivity arises when the
+  In particular, the~model illustrates how such non-injectivity arises when the
   effective description has a finite capacity to encode distinctions present at the
-  underlying level, and how this leads generically to non-factorizable observable
+  underlying level, and~how this leads generically to non-factorizable observable
   statistics.
 
-  \subsection{Underlying configuration space}
+\subsection[\appendixname~\thesubsection]{Underlying Configuration~Space}
     \label{subsec:underlying-configuration-space}
 
     Let $\Omega$ denote a finite set of underlying configurations.
     Each configuration $\omega \in \Omega$ represents a complete specification of a relational structure.
-    No spatiotemporal interpretation is assumed at this level, and no notion of
-    subsystem decomposition is imposed.
+    No spatiotemporal interpretation is assumed at this level, and~no notion of
+    subsystem decomposition is~imposed.
 
     We consider a situation in which two measurement regions, denoted $A$ and $B$, are
     identified only at the level of observable descriptions.
-    At the level of $\Omega$, the configurations need not decompose into independent
+    At the level of $\Omega$, the~configurations need not decompose into independent
     components associated with $A$ and $B$, reflecting the fact that the effective
-    description may have a finite capacity to encode such distinctions.
+    description may have a finite capacity to encode such~distinctions.
 
-  \subsection{Non-injective projection}
+ \subsection[\appendixname~\thesubsection]{Non-Injective~Projection}
     \label{subsec:non-injective-projection}
 
     Observable outcomes are defined through a projection
@@ -1182,7 +1206,7 @@ probabilistic factorization; locality; quantum foundations}
       [\omega] = \{ \omega' \in \Omega \mid \Pi(\omega') = \Pi(\omega) \}.
     \]
 
-  \subsection{Emergence of correlations}
+  \subsection{Emergence of~Correlations}
     \label{subsec:emergence-of-correlations}
 
     Let $\mu(\omega)$ be a probability distribution defined on $\Omega$.
@@ -1192,7 +1216,7 @@ probabilistic factorization; locality; quantum foundations}
     \]
 
     Because the preimage $\Pi^{-1}(a,b)$ does not generically decompose into independent
-    subsets associated with $A$ and $B$, the joint probability $P(a,b)$ does not admit a
+    subsets associated with $A$ and $B$, the~joint probability $P(a,b)$ does not admit a
     factorized representation of the form $P(a)P(b)$ or
     $P(a \mid \lambda) P(b \mid \lambda)$ for any effective variable $\lambda$.
 
@@ -1203,16 +1227,16 @@ probabilistic factorization; locality; quantum foundations}
     response functions associated with $A$ and $B$.
 
     The resulting correlations therefore arise not from any interaction or information
-    exchange between $A$ and $B$, but from the structure of the non-injective mapping
+    exchange between $A$ and $B$, but~from the structure of the non-injective mapping
     itself.
     In particular, they reflect the fact that the effective description has a finite
     capacity to encode distinctions present in $\Omega$, so that multiple configurations
-    are necessarily identified at the observable level.
+    are necessarily identified at the observable~level.
 
-    From the perspective of the effective description, the two outcomes appear correlated
-    even when the corresponding measurements are spacelike separated.
+    From the perspective of the effective description, the~two outcomes appear correlated
+    even when the corresponding measurements are spacelike~separated.
 
-  \subsection{Free choice and absence of superdeterminism}
+  \subsection[\appendixname~\thesubsection]{Free Choice and Absence of~Superdeterminism}
     \label{subsec:free-choice-and-absence-of-superdeterminism}
 
     Measurement settings at $A$ and $B$ are assumed to be freely and independently
@@ -1225,8 +1249,8 @@ probabilistic factorization; locality; quantum foundations}
 
     No correlation between measurement settings and underlying configurations is
     required or assumed.
-    In particular, the underlying probability measure $\mu$ is defined independently
-    of any experimental choices.
+    In particular, the~underlying probability measure $\mu$ is defined independently
+    of any experimental~choices.
 
     The violation of statistical independence at the observable level arises solely
     from the non-injective nature of the projection $\Pi$.
@@ -1235,23 +1259,23 @@ probabilistic factorization; locality; quantum foundations}
     degrees of freedom.
     The effective description therefore fails to admit a factorized representation,
     even though measurement settings remain statistically independent of the
-    underlying state.
+    underlying~state.
 
     The resulting breakdown of probabilistic factorization is thus structural rather
     than conspiratorial.
     It reflects the loss of injectivity of the descriptive mapping, not any
-    fine-tuned correlation between experimental choices and underlying configurations.
+    fine-tuned correlation between experimental choices and underlying~configurations.
 
-  \subsection{Explicit CHSH violation from non-injective projection}
+ \subsection[\appendixname~\thesubsection]{Explicit CHSH Violation from Non-Injective~Projection}
     \label{subsec:explicit-chsh-violation-from-non-injective-projection}
 
     We make the Bell--CHSH violation explicit by exhibiting an observable probability
-    model generated by a non-injective projected description.
+    model generated by a non-injective projected~description.
 
     Let measurement settings be $x\in\{0,1\}$ at $A$ and $y\in\{0,1\}$ at $B$,
     and outcomes be $a,b\in\{-1,+1\}$.
     Consider the no-signalling correlations defined by
-    \begin{equation}
+\begin{equation}
       P(a,b|x,y)
       \;=\;
       \begin{cases}
@@ -1263,104 +1287,226 @@ probabilistic factorization; locality; quantum foundations}
     for which the marginals are uniform: $P(a|x)=P(b|y)=1/2$.
 
     The correlators are therefore
-    \begin{equation}
+\begin{equation}
       E_{xy} \;=\; \sum_{a,b=\pm 1} ab\,P(a,b|x,y) \;=\; (-1)^{xy},
       \label{eq:prbox_correlators}
     \end{equation}
     and the CHSH expression is
-    \begin{equation}
+\begin{equation}
       S \;=\; \bigl|E_{00}+E_{01}+E_{10}-E_{11}\bigr|
       \;=\; 4 \;>\; 2.
       \label{eq:chsh_violation}
     \end{equation}
 
-    \medskip
-    \noindent
-    \textit{Realization as a projected description.}
-    Define an underlying finite configuration space
-    $\Omega \equiv \{(a_0,a_1,b_0,b_1)\,|\,a_x,b_y\in\{-1,+1\}\}$ equipped with a
+%    \medskip
+%    \noindent
+    \subsubsection*{\highlighting{Realization as a Projected Description}} %MDPI: We changed this into 3rd level section title. Please confirm.
+    \textls[-15]{Define an underlying finite configuration space
+    $\Omega \equiv \{(a_0,a_1,b_0,b_1)\,|\,a_x,b_y\in\{-1,+1\}\}$} equipped with a
     normalized measure $\mu$ supported only on the subset satisfying the global
     constraint
-    \begin{equation}
+\begin{equation}
       a_0 b_0 = a_0 b_1 = a_1 b_0 = +1, \qquad a_1 b_1 = -1.
       \label{eq:global_constraint}
     \end{equation}
-    This constraint encodes a non-factorizable relational structure at the level of
+    
+    \hl{This} constraint encodes a non-factorizable relational structure at the level of
     $\Omega$, consistent with the absence of subsystem decomposition assumed in
-    Appendix~B.1--B.3.
+    Appendix~\ref{subsec:underlying-configuration-space}--\ref{subsec:emergence-of-correlations}.
 
     Observable pairs are obtained through a projection
-    \begin{equation}
+\begin{equation}
       \Pi:\Omega \times \{0,1\}^2 \to O_A\times O_B,\qquad
       \Pi(\omega,x,y) \;=\; (a_x,b_y).
       \label{eq:contextual_projection}
     \end{equation}
-    This formulation makes explicit that the underlying configuration $\omega$ is
+    
+    \hl{This} formulation makes explicit that the underlying configuration $\omega$ is
     independent of the measurement settings, which merely select which components are
     read out.
     The dependence on $(x,y)$ therefore does not introduce contextual hidden variables,
-    but reflects the operational definition of observables.
+    but reflects the operational definition of~observables.
 
-    For fixed $(x,y)$, the induced mapping
+    For fixed $(x,y)$, the~induced mapping
     $\Pi_{x,y}:\omega \mapsto (a_x,b_y)$ is generally non-injective.
     Many distinct underlying configurations correspond to the same observable pair
-    $(a,b)$, so that the observable probabilities take the projected form
-    \begin{equation}
+    $(a,b)$ so that the observable probabilities take the projected form
+\begin{equation}
       P(a,b|x,y) \;=\; \mu\!\left(\Pi_{x,y}^{-1}(a,b)\right).
       \label{eq:projected_probabilities_chsh}
     \end{equation}
-    For a symmetric choice of $\mu$ on the constrained subset
-    Eq.~\eqref{eq:global_constraint}, this reproduces exactly the distribution
-    Eq.~\eqref{eq:prbox_distribution}.
+    
+    \hl{For} a symmetric choice of $\mu$ on the constrained subset
+    Equation~\eqref{eq:global_constraint}, this reproduces exactly the distribution
+    Equation~\eqref{eq:prbox_distribution}.
 
-    \medskip
-    \noindent
-    This construction shows explicitly that a maximal CHSH violation can arise from a
+%    \medskip
+%    \noindent
+    \hl{This} construction shows explicitly that a maximal CHSH violation can arise from a
     non-injective projection applied to an underlying configuration space with global
-    constraints, without requiring any superluminal influence.
+    constraints, without~requiring any superluminal influence.
     The use of maximal correlations is for illustrative purposes only and does not
     imply that such correlations are physically realizable within quantum theory.
     The violation reflects the incompatibility between Bell-type factorizability and
     projected descriptions in which observable outcomes are defined only up to
-    equivalence classes of underlying configurations.
+    equivalence classes of underlying~configurations.
 
   \subsection{Interpretation}
     \label{subsec:interpretation}
 
     This toy model illustrates how correlations between observables may arise when they
     correspond to different projections of a single underlying configuration.
-    In this setting, joint outcomes are not independently specifiable, but must satisfy
-    global consistency constraints inherited from the underlying structure.
+    In this setting, joint outcomes are not independently specifiable, but~must satisfy
+    global consistency constraints inherited from the underlying~structure.
 
-    Bell-type correlations can therefore be understood as a manifestation of
-    non-factorizability at the level of effective descriptions, rather than as evidence
+    \textls[-15]{Bell-type correlations can therefore be understood as a manifestation of
+    non-factorizability} at the level of effective descriptions, rather than as evidence
     for nonlocal causal influences.
     The apparent nonlocality reflects the fact that observable outcomes are defined only
-    up to equivalence classes of underlying configurations, and cannot be assigned
-    independently within a single effective representation.
+    up to equivalence classes of underlying configurations, and~cannot be assigned
+    independently within a single effective~representation.
 
-    The role of the toy model is not to reproduce quantum theory in detail, but to
+    The role of the toy model is not to reproduce quantum theory in detail, but~to
     isolate a minimal structural mechanism sufficient to generate Bell--CHSH violations.
-    In particular, the use of PR-box correlations highlights that the strength of the
-    violation is not tied to any specific dynamics, but to the failure of injectivity
-    in the mapping from underlying configurations to observables.
+    In particular, the~use of PR-box correlations highlights that the strength of the
+    violation is not tied to any specific dynamics, but~to the failure of injectivity
+    in the mapping from underlying configurations to~observables.
 
     More realistic realizations may impose additional constraints that restrict the set
-    of admissible correlations (for instance to the quantum Tsirelson bound), but the
+    of admissible correlations (for instance to the quantum Tsirelson bound), but~the
     structural origin of the correlations remains the same: a non-injective projection
     from an underlying configuration space that does not admit a subsystem factorization.
-    These constraints may arise from dynamical, geometric, or information-theoretic
+    These constraints may arise from dynamical, geometric, or~information-theoretic
     considerations that effectively bound the accessible projection entropy $S_{\Pi}$,
-    and therefore limit the strength of Bell--CHSH violations.
+    and therefore, limit the strength of Bell--CHSH~violations.
 
-    \acknowledgments{The author acknowledges the use of large language models as a
-    supportive tool for refining language, structure, and internal consistency
-    during the development of this manuscript. All conceptual contributions,
-      theoretical choices, and interpretations remain the sole responsibility of the author.}
 
-    \conflictsofinterest{The author declares no conflicts of interest.}
+\begin{adjustwidth}{-\extralength}{0cm}
+%\centering %% If there is a figure in wide page, please release command \centering, for Table, ``\textwidth" should be ``\fulllength"
 
     \reftitle{References}
-    \bibliography{references}
+%    \bibliography{references}
 
+\begin{thebibliography}{999}
+
+\bibitem[Accardi and Cecchini(1982)]{AccardiCecchini1982}
+Accardi, L.; Cecchini, C.
+\newblock Conditional expectations in von Neumann algebras and a theorem of
+Takesaki.
+\newblock {\em J. Funct. Anal.} {\bf 1982}, {\em 45},~245--273.
+\newblock {\url{https://doi.org/10.1016/0022-1236(82)90022-2}}.
+
+\bibitem[Dzhafarov and Kujala(2017)]{Dzhafarov2017}
+Dzhafarov, E.N.; Kujala, J.V.
+\newblock Probabilistic foundations of contextuality.
+\newblock {\em Fortschritte Phys.} {\bf 2017}, {\em 65},~1600040.
+\newblock {\url{https://doi.org/10.1002/prop.201600040}}.
+
+\bibitem[Abramsky and Brandenburger(2011)]{AbramskyBrandenburger2011}
+Abramsky, S.; Brandenburger, A.
+\newblock The Sheaf-Theoretic Structure of Non-Locality and Contextuality.
+\newblock {\em New J. Phys.} {\bf 2011}, {\em 13},~113036.
+\newblock {\url{https://doi.org/10.1088/1367-2630/13/11/113036}}.
+
+\bibitem[Amaral and Cunha(2018)]{Amaral2018}
+Amaral, B.; Cunha, M.T.
+\newblock {\em On Graph Approaches to Contextuality and Their Role in Quantum
+  Theory}; Springer: Cham, Switzerland, 2018.
+\newblock {\url{https://doi.org/10.1007/978-3-319-93827-1}}.
+
+\bibitem[Sulis(2025)]{Sulis2025}
+Sulis, W.
+\newblock Transitivity, Contextuality, and Decision Making.
+\newblock {\em Philos. Trans. R. Soc. A} {\bf 2025},
+  {\em 383},~20240373.
+\newblock {\url{https://doi.org/10.1098/rsta.2024.0373}}.
+
+\bibitem[Haven and Khrennikov(2014)]{Haven2014}
+Haven, E.; Khrennikov, A.
+\newblock {\em Quantum Social Science}; Cambridge University Press: Cambridge, UK,
+  2014.
+\newblock {\url{https://doi.org/10.1017/CBO9781139003261}}.
+
+\bibitem[Beau(2026{\natexlab{a}})]{Beau2026a}
+Beau, J.
+\newblock Relational Reconstruction of Spacetime Geometry from Graph
+  Laplacians.
+\newblock {\em Zenodo} {\bf \hl{2026}}. %MDPI: We removed ``Companion paper,'' behind. Please confirm.
+\newblock %Companion paper,
+ {\url{https://doi.org/10.5281/zenodo.18356037}}.
+
+\bibitem[Beau(2026{\natexlab{b}})]{Q1}
+Beau, J.
+\newblock From Admissibility to Quantum Structure: Phase Coherence and
+  Correlations from Non-Injective Projection. {\em\hl{ Zenodo}} %MDPI: Newly added journal information. Please confirm.
+\hl{\textbf{2026}}. %MDPI: We removed ``Cosmochrony companion paper Q1,'' behind. Please confirm.
+\newblock %Cosmochrony companion paper Q1,
+  {\url{https://doi.org/10.5281/zenodo.19561060}}.
+
+\bibitem[Tsirelson(1980)]{Tsirelson1980}
+Tsirelson, B.S.
+\newblock Quantum generalizations of {Bell}'s inequality.
+\newblock {\em Lett. Math. Phys.} {\bf 1980}, {\em 4},~93--100.
+\newblock {\url{https://doi.org/10.1007/BF00417500}}.
+
+\bibitem[Brunner et~al.(2014)Brunner, Cavalcanti, Pironio, Scarani, and
+  Wehner]{Brunner2014}
+Brunner, N.; Cavalcanti, D.; Pironio, S.; Scarani, V.; Wehner, S.
+\newblock Bell nonlocality.
+\newblock {\em Rev. Mod. Phys.} {\bf 2014}, {\em 86},~419--478.
+\newblock {\url{https://doi.org/10.1103/RevModPhys.86.419}}.
+
+\bibitem[Bell(1964)]{Bell1964}
+Bell, J.S.
+\newblock On the Einstein Podolsky Rosen paradox.
+\newblock {\em Phys. Phys. Fiz.} {\bf 1964}, {\em 1},~195--200.
+
+\bibitem[Zurek(2003)]{Zurek2003}
+Zurek, W.H.
+\newblock Decoherence, einselection, and the quantum origins of the classical.
+\newblock {\em Rev. Mod. Phys.} {\bf 2003}, {\em 75},~715--775.
+\newblock {\url{https://doi.org/10.1103/RevModPhys.75.715}}.
+
+\bibitem['t~Hooft(2016)]{tHooft2016CAI}
+'t~Hooft, G.
+\newblock {\em The Cellular Automaton Interpretation of Quantum Mechanics;
+  Vol. 185, Fundamental Theories of Physics}; Springer: Cham, Switzerland,
+  2016.
+\newblock {\url{https://doi.org/10.1007/978-3-319-41285-6}}.
+
+\bibitem[Hall(2010)]{Hall2010LocalDeterministic}
+Hall, M.J.W.
+\newblock Local deterministic model of singlet state correlations based on
+  relaxing measurement independence.
+\newblock {\em Phys. Rev. Lett.} {\bf 2010}, {\em 105},~250404.
+\newblock {\url{https://doi.org/10.1103/PhysRevLett.105.250404}}.
+
+\bibitem[Kochen and Specker(1967)]{KochenSpecker1967}
+Kochen, S.; Specker, E.P.
+\newblock The problem of hidden variables in quantum mechanics.
+\newblock {\em J. Math. Mech.} {\bf 1967}, {\em
+  17},~59--87.
+\newblock {\url{https://doi.org/10.1512/iumj.1968.17.17004}}.
+
+\bibitem[Spekkens(2007{\natexlab{a}})]{Spekkens2007Epistemic}
+\hl{Spekkens, R.W.} %MDPI: Refs. 16 and 17 are duplicated. Please remove duplicated references and rearrange all the references so that they appear in numerical order. Please ensure that there are no duplicated references.
+\newblock Evidence for the epistemic view of quantum states.
+\newblock {\em Phys. Rev. A} {\bf 2007}, {\em 75},~032110.
+\newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
+
+\bibitem[Spekkens(2007{\natexlab{b}})]{Spekkens2007}
+\hl{Spekkens, R.W.}
+\newblock Evidence for the Epistemic View of Quantum States: A Toy Theory.
+\newblock {\em Phys. Rev. A} {\bf 2007}, {\em 75},~032110.
+\newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
+
+\bibitem[Nielsen and Chuang(2000)]{NielsenChuang2000}
+Nielsen, M.A.; Chuang, I.L.
+\newblock {\em Quantum Computation and Quantum Information}; Cambridge
+  University Press: Cambridge, UK, 2000.
+\newblock {\url{https://doi.org/10.1017/CBO9780511976667}}.
+
+\end{thebibliography}
+\PublishersNote{}
+\end{adjustwidth}
 \end{document}
