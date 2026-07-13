@@ -1,60 +1,46 @@
-\documentclass[quantumrep,article,accept,pdftex,oneauthor]{Definitions/mdpi}
-\usepackage{amsmath,amssymb,amsfonts}
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsopn,amstext}
 \usepackage{graphicx}
-\usepackage{physics}
-\usepackage{tikz}
-\usepackage{amsopn}
-\usepackage{amstext}
+\usepackage{float}
+\usepackage{booktabs}
 \usepackage{microtype}
 \usepackage{xparse}
-\usepackage{algorithm}
-\usepackage{algorithmicx}
-\usepackage{algpseudocode}
-% Boxes
+\usepackage{tikz}
 \usepackage[most]{tcolorbox}
-% Plots (pgfplots provides axis/addplot)
 \usepackage{pgfplots}
+\usepackage{doi}
+\usepackage{hyperref}
+
 \usetikzlibrary{intersections}
 \usepgfplotslibrary{fillbetween}
 \pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta, calc, fit, decorations.pathmorphing, decorations.pathreplacing,
+  shapes.geometric, shadings, positioning, decorations.markings, patterns}
+
 \NewDocumentCommand{\subsubsubsection}{s m}{%
   \IfBooleanTF{#1}{\paragraph*{#2}}{\paragraph{#2}}%
 }
-\usetikzlibrary
-{arrows.meta, calc, fit, decorations.pathmorphing, decorations.pathreplacing, shapes.geometric, shadings, positioning,
-  decorations.markings, patterns}
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
-\firstpage{1}
-\makeatletter
-\setcounter{page}{\@firstpage}
-\makeatother
-\pubvolume{1}
-\issuenum{1}
-\articlenumber{0}
-\pubyear{2026}
-\copyrightyear{2026}
-\externaleditor{Yanpeng Zhang}
-\datereceived{29 March 2026}
-\daterevised{24 April 2026}
-\dateaccepted{28 April 2026}
-\datepublished{ }
+\title{Breakdown of Bell Factorization from Non-Injective Effective Descriptions}
+\author{J\'er\^ome Beau\thanks{Independent Researcher, Nanterre 92000, France;
+  jerome.beau@cosmochrony.org}}
+\date{2026}
 
-\Title{Breakdown of Bell Factorization from Non-Injective Effective~Descriptions}
+\begin{document}
+\maketitle
 
-\newcommand{\orcidauthorA}{0009-0001-7697-7868}
-
-\Author{Jérôme Beau \orcidA{}}
-
-\AuthorNames{Jérôme Beau}
-
-\address[1]{%
-  Independent Researcher, Nanterre 92000, France; jerome.beau@cosmochrony.org}
-
-%\corres{Correspondence: jerome.beau@cosmochrony.org}
-
-\abstract{Violations of Bell inequalities are commonly interpreted as evidence
+\begin{abstract}
+  Violations of Bell inequalities are commonly interpreted as evidence
   for nonlocal influences or as constraints on realist descriptions.
   We show that the failure of Bell-type factorizability arises naturally
   when observable outcomes are obtained through a non-injective mapping
@@ -84,13 +70,16 @@
   effective mapping becomes approximately injective.
   In the operator language of quantum theory, the same mechanism admits a natural
   reformulation in terms of reduction to an effective observable subalgebra by a
-  noncommutative conditional expectation.}
+  noncommutative conditional expectation.
+\end{abstract}
 
-\keyword{Bell inequalities; quantum correlations; non-injective projection;
-probabilistic factorization; locality; quantum foundations}
+\medskip
+\noindent\textbf{Keywords:} Bell inequalities; quantum correlations; non-injective projection;
+probabilistic factorization; locality; quantum foundations
 
-\providecommand{\bibcommenthead}{}
-\begin{document}
+\clearpage
+\tableofcontents
+\clearpage
 
   \section{Introduction}
     \label{sec:introduction}
@@ -1055,32 +1044,17 @@ probabilistic factorization; locality; quantum foundations}
   Bell-type correlations may therefore be interpreted as the minimal observable
   signature of a non-zero projection entropy $S_{\Pi}$ associated with the
   non-injective character of the effective~description.
-\vspace{6pt}
 
-\funding{This research received no external funding.}
+  \section*{Acknowledgements}
+    The author acknowledges the use of large language models as a supportive tool for refining
+    language, structure, and internal consistency during the development of this manuscript.
+    All conceptual contributions, theoretical choices, and interpretations remain the sole
+    responsibility of the author.
 
-\dataavailability{No new data were created or analyzed in this study. Data sharing is not applicable to this article.}
-
-    \acknowledgments{The author acknowledges the use of large language models as a
-    supportive tool for refining language, structure, and~internal consistency
-    during the development of this manuscript. All conceptual contributions,
-      theoretical choices, and~interpretations remain the sole responsibility of the~author.}
-
-    \conflictsofinterest{The author declares no conflicts of interest.}
-
-
-%  \appendix
-%  \clearpage
-
-%  \section*{Appendices}
-%  \appendix
-
-\appendixtitles{yes} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
-\appendixstart
 \appendix
 
 
-\section[\appendixname~\thesection]{Formal Conditions for the Failure of Probabilistic~Factorization}
+\section{Formal Conditions for the Failure of Probabilistic~Factorization}
   \label{app:factorization}
 
   This Appendix provides a formal clarification of the structural conditions under
@@ -1166,7 +1140,7 @@ probabilistic factorization; locality; quantum foundations}
   When observable outcomes arise through non-injective projections, violations of Bell
   inequalities are a natural and generic consequence of finite-capacity effective~descriptions.
 
-  \section[\appendixname~\thesection]{A Toy Model Illustrating Non-Injective~Projection}
+  \section{A Toy Model Illustrating Non-Injective~Projection}
   \label{app:toy-model}
 
   We present a simple toy model intended to illustrate how Bell-type correlations may
@@ -1181,7 +1155,7 @@ probabilistic factorization; locality; quantum foundations}
   underlying level, and~how this leads generically to non-factorizable observable
   statistics.
 
-\subsection[\appendixname~\thesubsection]{Underlying Configuration~Space}
+\subsection{Underlying Configuration~Space}
     \label{subsec:underlying-configuration-space}
 
     Let $\Omega$ denote a finite set of underlying configurations.
@@ -1195,7 +1169,7 @@ probabilistic factorization; locality; quantum foundations}
     components associated with $A$ and $B$, reflecting the fact that the effective
     description may have a finite capacity to encode such~distinctions.
 
- \subsection[\appendixname~\thesubsection]{Non-Injective~Projection}
+ \subsection{Non-Injective~Projection}
     \label{subsec:non-injective-projection}
 
     Observable outcomes are defined through a projection
@@ -1246,7 +1220,7 @@ probabilistic factorization; locality; quantum foundations}
     From the perspective of the effective description, the~two outcomes appear correlated
     even when the corresponding measurements are spacelike~separated.
 
-  \subsection[\appendixname~\thesubsection]{Free Choice and Absence of~Superdeterminism}
+  \subsection{Free Choice and Absence of~Superdeterminism}
     \label{subsec:free-choice-and-absence-of-superdeterminism}
 
     Measurement settings at $A$ and $B$ are assumed to be freely and independently
@@ -1276,7 +1250,7 @@ probabilistic factorization; locality; quantum foundations}
     It reflects the loss of injectivity of the descriptive mapping, not any
     fine-tuned correlation between experimental choices and underlying~configurations.
 
- \subsection[\appendixname~\thesubsection]{Explicit CHSH Violation from Non-Injective~Projection}
+ \subsection{Explicit CHSH Violation from Non-Injective~Projection}
     \label{subsec:explicit-chsh-violation-from-non-injective-projection}
 
     We make the Bell--CHSH violation explicit by exhibiting an observable probability
@@ -1390,133 +1364,8 @@ probabilistic factorization; locality; quantum foundations}
     considerations that effectively bound the accessible projection entropy $S_{\Pi}$,
     and therefore, limit the strength of Bell--CHSH~violations.
 
+  \clearpage
+  \bibliographystyle{plain}
+  \bibliography{cosmochrony-bibliography, references}
 
-\begin{adjustwidth}{-\extralength}{0cm}
-%\centering %% If there is a figure in wide page, please release command \centering, for Table, ``\textwidth" should be ``\fulllength"
-
-    \reftitle{References}
-%    \bibliography{references}
-
-\begin{thebibliography}{999}
-
-\bibitem[Accardi and Cecchini(1982)]{AccardiCecchini1982}
-Accardi, L.; Cecchini, C.
-\newblock Conditional expectations in von Neumann algebras and a theorem of
-Takesaki.
-\newblock {\em J. Funct. Anal.} {\bf 1982}, {\em 45},~245--273.
-\newblock {\url{https://doi.org/10.1016/0022-1236(82)90022-2}}.
-
-\bibitem[Dzhafarov and Kujala(2017)]{Dzhafarov2017}
-Dzhafarov, E.N.; Kujala, J.V.
-\newblock Probabilistic foundations of contextuality.
-\newblock {\em Fortschritte Phys.} {\bf 2017}, {\em 65},~1600040.
-\newblock {\url{https://doi.org/10.1002/prop.201600040}}.
-
-\bibitem[Abramsky and Brandenburger(2011)]{AbramskyBrandenburger2011}
-Abramsky, S.; Brandenburger, A.
-\newblock The Sheaf-Theoretic Structure of Non-Locality and Contextuality.
-\newblock {\em New J. Phys.} {\bf 2011}, {\em 13},~113036.
-\newblock {\url{https://doi.org/10.1088/1367-2630/13/11/113036}}.
-
-\bibitem[Amaral and Cunha(2018)]{Amaral2018}
-Amaral, B.; Cunha, M.T.
-\newblock {\em On Graph Approaches to Contextuality and Their Role in Quantum
-  Theory}; Springer: Cham, Switzerland, 2018.
-\newblock {\url{https://doi.org/10.1007/978-3-319-93827-1}}.
-
-\bibitem[Sulis(2025)]{Sulis2025}
-Sulis, W.
-\newblock Transitivity, Contextuality, and Decision Making.
-\newblock {\em Philos. Trans. R. Soc. A} {\bf 2025},
-  {\em 383},~20240373.
-\newblock {\url{https://doi.org/10.1098/rsta.2024.0373}}.
-
-\bibitem[Pienaar(2026)]{Pienaar2026}
-Pienaar, J.L.
-\newblock Wigner's Diamond and the Quantum Fragmentation of Space-time.
-\newblock {\em Found. Phys.} {\bf 2026}, {\em 56},~20.
-\newblock {\url{https://doi.org/10.1007/s10701-026-00915-z}}.
-
-\bibitem[Haven and Khrennikov(2014)]{Haven2014}
-Haven, E.; Khrennikov, A.
-\newblock {\em Quantum Social Science}; Cambridge University Press: Cambridge, UK,
-  2014.
-\newblock {\url{https://doi.org/10.1017/CBO9781139003261}}.
-
-\bibitem[Beau(2026{\natexlab{a}})]{Beau2026a}
-Beau, J.
-\newblock Relational Reconstruction of Spacetime Geometry from Graph
-  Laplacians.
-\newblock {\em Zenodo} {\bf 2026}.
-\newblock
- {\url{https://doi.org/10.5281/zenodo.18356037}}.
-
-\bibitem[Beau(2026{\natexlab{b}})]{Q1}
-Beau, J.
-\newblock From Admissibility to Quantum Structure: Phase Coherence and
-  Correlations from Non-Injective Projection.
-\newblock {\em Zenodo} {\bf 2026}.
-  \newblock
-  {\url{https://doi.org/10.5281/zenodo.19561060}}.
-
-\bibitem[Tsirelson(1980)]{Tsirelson1980}
-Tsirelson, B.S.
-\newblock Quantum generalizations of {Bell}'s inequality.
-\newblock {\em Lett. Math. Phys.} {\bf 1980}, {\em 4},~93--100.
-\newblock {\url{https://doi.org/10.1007/BF00417500}}.
-
-\bibitem[Brunner et~al.(2014)Brunner, Cavalcanti, Pironio, Scarani, and
-  Wehner]{Brunner2014}
-Brunner, N.; Cavalcanti, D.; Pironio, S.; Scarani, V.; Wehner, S.
-\newblock Bell nonlocality.
-\newblock {\em Rev. Mod. Phys.} {\bf 2014}, {\em 86},~419--478.
-\newblock {\url{https://doi.org/10.1103/RevModPhys.86.419}}.
-
-\bibitem[Bell(1964)]{Bell1964}
-Bell, J.S.
-\newblock On the Einstein Podolsky Rosen paradox.
-\newblock {\em Phys. Phys. Fiz.} {\bf 1964}, {\em 1},~195--200.
-
-\bibitem[Zurek(2003)]{Zurek2003}
-Zurek, W.H.
-\newblock Decoherence, einselection, and the quantum origins of the classical.
-\newblock {\em Rev. Mod. Phys.} {\bf 2003}, {\em 75},~715--775.
-\newblock {\url{https://doi.org/10.1103/RevModPhys.75.715}}.
-
-\bibitem['t~Hooft(2016)]{tHooft2016CAI}
-'t~Hooft, G.
-\newblock {\em The Cellular Automaton Interpretation of Quantum Mechanics;
-  Vol. 185, Fundamental Theories of Physics}; Springer: Cham, Switzerland,
-  2016.
-\newblock {\url{https://doi.org/10.1007/978-3-319-41285-6}}.
-
-\bibitem[Hall(2010)]{Hall2010LocalDeterministic}
-Hall, M.J.W.
-\newblock Local deterministic model of singlet state correlations based on
-  relaxing measurement independence.
-\newblock {\em Phys. Rev. Lett.} {\bf 2010}, {\em 105},~250404.
-\newblock {\url{https://doi.org/10.1103/PhysRevLett.105.250404}}.
-
-\bibitem[Kochen and Specker(1967)]{KochenSpecker1967}
-Kochen, S.; Specker, E.P.
-\newblock The problem of hidden variables in quantum mechanics.
-\newblock {\em J. Math. Mech.} {\bf 1967}, {\em
-  17},~59--87.
-\newblock {\url{https://doi.org/10.1512/iumj.1968.17.17004}}.
-
-\bibitem[Spekkens(2007)]{Spekkens2007Epistemic}
-Spekkens, R.W.
-\newblock Evidence for the Epistemic View of Quantum States: A Toy Theory.
-\newblock {\em Phys. Rev. A} {\bf 2007}, {\em 75},~032110.
-\newblock {\url{https://doi.org/10.1103/PhysRevA.75.032110}}.
-
-\bibitem[Nielsen and Chuang(2000)]{NielsenChuang2000}
-Nielsen, M.A.; Chuang, I.L.
-\newblock {\em Quantum Computation and Quantum Information}; Cambridge
-  University Press: Cambridge, UK, 2000.
-\newblock {\url{https://doi.org/10.1017/CBO9780511976667}}.
-
-\end{thebibliography}
-\PublishersNote{}
-\end{adjustwidth}
 \end{document}
