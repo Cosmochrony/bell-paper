@@ -1,115 +1,85 @@
-This repository contains the source of the
-[paper on non-injective projection and Bell correlations](pdf/Bell.pdf)
-(paper B).
+# Bell paper: current scientific status
 
-This work studies a class of **effective descriptions** in which the mapping
-from underlying relational configurations to observable outcomes is
-**non-injective**.
-We show that, in such settings, **Bell-type correlations** arise as a structural
-consequence of projection, rather than from nonlocal dynamics or modifications
-of quantum mechanics.
+This repository contains the source associated with:
 
-In the revised version (v1.2), non-injectivity is further analyzed as a
-**saturation effect of the projection itself**.
-When the effective description cannot resolve the full relational structure of
-the underlying configurations, probabilistic factorization fails at the level
-of observables, even though the underlying dynamics remains local and
-causally well-defined.
+> J. Beau, *Breakdown of Bell Factorization from Non-Injective Effective Descriptions*,
+> *Quantum Reports* **8** (2026), 44,
+> [DOI 10.3390/quantum8020044](https://doi.org/10.3390/quantum8020044).
 
-The paper does not introduce new dynamical laws.
-Its purpose is to isolate a **minimal structural condition** under which Bell
-inequalities cease to apply, thereby clarifying what is—and what is not—ruled
-out by Bell-type no-go theorems.
+## Status warning
 
-## Core Claims
+The article must not be cited as proving that non-injectivity of an observable map is
+sufficient to obstruct Bell factorisation.
+That implication is false.
+The author has notified the journal and requested the appropriate linked
+post-publication procedure.
 
-The paper is organized around the following statements:
+The current scientific audit is recorded outside this repository in
+"../quantum-structure/notes/bell-paper-central-claim-audit.md".
 
-1. **Bell inequalities constrain factorizable effective descriptions**  
-   Standard Bell-type derivations rely on a factorization assumption for joint
-   observable probabilities, conditional on an underlying parameterization.
+## Decisive countermodel
 
-2. **Non-injective projection generically obstructs factorization**  
-   When multiple underlying relational configurations are identified by the same
-   effective observable description, conditioning on any effective parameter
-   does not isolate independent local contributions, and the factorizable form
-   fails.
+Let
 
-3. **Projection saturation provides a structural origin for Bell violations**  
-   In regimes where the projection saturates, unresolved relational degrees of
-   freedom are compressed into effective probabilistic descriptions.
-   Bell-type correlations emerge as a consequence of this compression, without
-   invoking superluminal influences, retrocausality, or conspiratorial initial
-   conditions.
+\[
+\Omega=\{-1,+1\}^4\times\{0,1\},
+\qquad
+\Pi_{xy}(A_0,A_1,B_0,B_1,r)=(A_x,B_y),
+\]
 
-4. **Projection entropy quantifies unresolved relational structure**  
-   The degeneracy induced by non-injective projection admits a natural measure in
-   terms of a projection entropy, defined by the multiplicity of underlying
-   configurations compatible with a given observable outcome.
-   This entropy is structural rather than epistemic and characterizes the loss of
-   resolvability inherent to the effective description.
+with the uniform measure.
+Every \(\Pi_{xy}\) is non-injective, with fibres of size eight.
+Nevertheless, \(\lambda=\omega\) gives deterministic local responses,
+a setting-independent measure, and CHSH value zero.
+More generally, adjoining an independent erased label makes any Bell-local model
+non-injective without changing its observable statistics.
 
-5. **Classical behavior is recovered in approximately injective regimes**  
-   In regimes where environmental coupling, decoherence, or coarse-graining
-   restore approximate injectivity of the effective mapping, factorization
-   becomes a good approximation and Bell-type violations are suppressed in
-   practice.
+The formal appendix in the article restricts \(\lambda\) to a function of
+\(\Pi(\omega)\).
+Bell factorisation permits the complete underlying configuration itself as the
+conditioning variable, so that restriction does not prove the claimed theorem.
 
-## What This Paper Does Not Assume
+## PR-box defect
 
-To avoid conflating structural and ontological claims, the paper does not assume:
+The proposed global assignment requires
 
-- a specific microscopic ontology,
-- a modification of quantum mechanics,
-- superluminal or nonlocal dynamical influences,
-- retrocausal mechanisms,
-- superdeterminism or conspiratorial initial conditions.
+\[
+a_0b_0=a_0b_1=a_1b_0=+1,
+\qquad
+a_1b_1=-1.
+\]
 
-The analysis is phrased entirely in terms of **effective descriptions**, the
-structure of projection maps, and the conditions under which probabilistic
-factorization is or is not applicable.
+The product of the four constraints gives \(+1=-1\).
+The constrained support is empty, so no normalised measure reproduces the claimed
+PR-box distribution.
 
-## Keywords
+## Projection-entropy defect
 
-Bell inequalities, quantum correlations, non-injective projection,
-projection saturation, projection entropy, probabilistic factorization,
-quantum foundations
+The article defines
 
-## Repository Contents
-```
-paper/
-├── pdf/ # Compiled paper PDF
-├── tex/ # LaTeX sources
-└── README.md
-```
+\[
+S_\Pi=-\sum_o\nu(o)\log\nu(o),
+\qquad
+\nu(o)=\mu(\Pi^{-1}(o)).
+\]
 
-## Links
+This is the Shannon entropy of the output distribution, not a measure of
+non-injectivity.
+A constant, maximally non-injective map has \(S_\Pi=0\), while an injective map can
+have maximal output entropy.
+The proposed entropy--CHSH interpolation therefore has no derived endpoints.
 
-- 📄 Paper PDF: https://github.com/Cosmochrony/bell-paper
-- 🌐 Website: https://cosmochrony.org
-- 💻 GitHub organization: https://github.com/Cosmochrony
+## What remains valid
 
-## Citation
+- Bell violation excludes a common Bell-local factorisation under the standard
+  assumptions.
+- Global contextual constraints can obstruct a setting-independent joint assignment.
+- Non-injectivity can accompany either Bell-local or Bell-nonlocal statistics.
 
-If you reference this work, please cite:
+The missing Cosmochrony input is a derived obstruction to a setting-independent
+global coupling across measurement contexts.
+Bare non-injectivity does not provide that obstruction.
 
-> J. Beau, *Bell Inequality Violations from Non-Injective Projection*, 2026.
+The repository source and Zenodo record are not silent replacements for the journal
+version of record.
 
-(Replace with DOI / venue when available.)
-
-## Acknowledgements
-
-Portions of the editorial refinement benefited from iterative interactions with
-large language models.
-These tools were used as analytical assistants for exploring alternative
-formulations, checking internal consistency, and improving clarity.
-All claims, interpretations, and final formulations remain the sole
-responsibility of the author.
-
-## Contributions
-
-This repository is intended as a research reference.
-
-Critical feedback, independent analyses, and formal scrutiny are welcome.
-Please open an issue to discuss conceptual points, possible counterexamples, or
-alternative formulations.
